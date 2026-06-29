@@ -1,0 +1,404 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.38985516451091,
+          50.112264137815203
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1,
+        "ID": "AMVG0000001",
+        "VILNAME_S": "P’uýám\u0301",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{2C9FADF1-6EC6-4BEB-803E-EFD2032201DF}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33541197965545,
+          50.062215081987858
+        ]
+      },
+      "properties": {
+        "OBJECTID": 2,
+        "ID": "AMVG0000002",
+        "VILNAME_S": "Ch’éḵch’eḵts",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{839746CB-7B42-43E1-B5FF-68E6FA0924CA}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.29718122730598,
+          49.939024438167124
+        ]
+      },
+      "properties": {
+        "OBJECTID": 3,
+        "ID": "AMVG0000003",
+        "VILNAME_S": "Skáwshen",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{4C4949D9-066A-4029-88FE-40298AEE658F}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.20507966919418,
+          49.794689898481849
+        ]
+      },
+      "properties": {
+        "OBJECTID": 4,
+        "ID": "AMVG0000004",
+        "VILNAME_S": "Yekw’ts",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{A4CE2A81-7F32-4BF0-8A01-5BF35E6E5DCB}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.15416262975761,
+          49.799618991905753
+        ]
+      },
+      "properties": {
+        "OBJECTID": 5,
+        "ID": "AMVG0000005",
+        "VILNAME_S": "Ch’iyáḵmesh",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{641A4509-4274-4D4C-A53A-9203A234D4FD}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.16417667836987,
+          49.774124219444694
+        ]
+      },
+      "properties": {
+        "OBJECTID": 6,
+        "ID": "AMVG0000006",
+        "VILNAME_S": "Wíweḵ’em",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{7DD3513C-D1E6-4A3C-BDCE-097768415251}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.16314429932069,
+          49.761609717014522
+        ]
+      },
+      "properties": {
+        "OBJECTID": 7,
+        "ID": "AMVG0000007",
+        "VILNAME_S": "Íkwikws",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{4E748BE9-8985-4A74-ABEB-5C698A799C29}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.13991977656727,
+          49.757491438292192
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8,
+        "ID": "AMVG0000008",
+        "VILNAME_S": "Siyí7ch’em",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{724E5BE2-FBA9-4C5C-9A60-D93719B2C2B4}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.13798428301409,
+          49.740269434023013
+        ]
+      },
+      "properties": {
+        "OBJECTID": 9,
+        "ID": "AMVG0000009",
+        "VILNAME_S": "Kaw\u0301tín",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{F6D2168C-99B9-40ED-B88E-22D7064B838A}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.15973709823878,
+          49.729130097630467
+        ]
+      },
+      "properties": {
+        "OBJECTID": 10,
+        "ID": "AMVG0000010",
+        "VILNAME_S": "Yekw’ápsem",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{C3051B81-4293-4862-BBEC-25F3C1AA03EE}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.15157886102648,
+          49.694336637888455
+        ]
+      },
+      "properties": {
+        "OBJECTID": 11,
+        "ID": "AMVG0000011",
+        "VILNAME_S": "St’á7mes",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{BB81EA33-66E9-4A1D-9506-6BDD869C2F0B}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.28948813654362,
+          49.578786272231518
+        ]
+      },
+      "properties": {
+        "OBJECTID": 12,
+        "ID": "AMVG0000012",
+        "VILNAME_S": "Ḵw’émḵw’em",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{234A72E6-2CB8-42B7-B952-5886B50649D6}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.49185560504833,
+          49.519228812930642
+        ]
+      },
+      "properties": {
+        "OBJECTID": 13,
+        "ID": "AMVG0000013",
+        "VILNAME_S": "Ḵ’íḵ’elx\u0331en",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{75465F7C-7622-4F47-9E1D-EB16C3445057}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.49820659588934,
+          49.413176049274661
+        ]
+      },
+      "properties": {
+        "OBJECTID": 14,
+        "ID": "AMVG0000014",
+        "VILNAME_S": "Ch’ḵw’élhp",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{5291617F-00F5-4102-A9F6-C61702976314}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.12823187110121,
+          49.327052566078493
+        ]
+      },
+      "properties": {
+        "OBJECTID": 15,
+        "ID": "AMVG0000015",
+        "VILNAME_S": "Xwmélch’sten",
+        "AUDIO": "./audio/TestSound.mp3",
+        "IMAGE": "./images/space_dolphins.jpg",
+        "GlobalID": "{A358413D-CA67-4958-8E64-9FB434046507}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.08313168199959,
+          49.313735708858424
+        ]
+      },
+      "properties": {
+        "OBJECTID": 16,
+        "ID": "AMVG0000016",
+        "VILNAME_S": "Eslha7áń",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{86C90D91-C664-4835-A79A-1BB2A0E43716}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.17302292556465,
+          49.782172179130924
+        ]
+      },
+      "properties": {
+        "OBJECTID": 17,
+        "ID": "AMVG0000017",
+        "VILNAME_S": "Sḵemín",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{72A10AAC-0C73-4D14-BE72-4224D6241C27}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.14046915174434,
+          49.275049286670168
+        ]
+      },
+      "properties": {
+        "OBJECTID": 18,
+        "ID": "AMVG0000018",
+        "VILNAME_S": "Sen\u0313a\u0301k\u0331w",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{BD02E3EF-3D28-4723-B02E-B7FA0AD0A61F}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.02097350140002,
+          49.303541635846095
+        ]
+      },
+      "properties": {
+        "OBJECTID": 19,
+        "ID": "AMVG0000019",
+        "VILNAME_S": "Ch’ích’elxwi7ḵw",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{04D729D2-8B23-46DE-A40C-C83C8A6D7081}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.17986740513231,
+          49.783272195511685
+        ]
+      },
+      "properties": {
+        "OBJECTID": 20,
+        "ID": "AMVG0000020",
+        "VILNAME_S": "Puḵwayúsm",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{2BD060AA-3046-448C-B8E9-9803DC1125D3}"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.47620145039396,
+          49.404522335014363
+        ]
+      },
+      "properties": {
+        "OBJECTID": 21,
+        "ID": "AMVG0000021",
+        "VILNAME_S": "Sx\u0331aaltxw",
+        "AUDIO": "",
+        "IMAGE": "",
+        "GlobalID": "{8F7C6A26-41A3-4FA0-8F4A-36E605F9E2B5}"
+      }
+    }
+  ]
+}
