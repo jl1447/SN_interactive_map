@@ -282,7 +282,7 @@
         "ID": "AMVG0000015",
         "VILNAME_S": "Xwmélch’sten",
         "AUDIO": "./audio/TestSound.mp3",
-        "IMAGES": "space_dolphins.jpg,coffee_book.jpg",
+        "IMAGES": "space_dolphins.jpg,coffee_book.jpg,orange_slice.png",
         "GlobalID": "{A358413D-CA67-4958-8E64-9FB434046507}"
       }
     },
