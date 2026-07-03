@@ -48,9 +48,6 @@ export async function loadVillages(map) {
                 const audioFile =
                     feature.properties?.AUDIO;
 
-                const imageFile =
-                    feature.properties?.IMAGE;
-                
                 const images =
                     feature.properties?.IMAGES;
                 
@@ -114,19 +111,6 @@ export async function loadVillages(map) {
                 
                     popupContent += `
                         </div>
-                    `;
-                }
-
-                
-                if (imageFile) {
-
-                    popupContent += `
-                        <br><br>
-                        <img
-                            src="${imageFile}"
-                            alt="${villageName}"
-                            class="popup-image"
-                        >
                     `;
                 }
 
