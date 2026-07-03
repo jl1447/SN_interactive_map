@@ -92,6 +92,33 @@ export async function loadVillages(map) {
                     `;
                 }
 
+                
+                const images =
+                    feature.properties?.IMAGES;
+                
+                if (images) {
+                
+                    popupContent += `
+                        <div class="image-gallery">
+                    `;
+                
+                    images.split(",").forEach(imageFile => {
+                
+                        popupContent += `
+                            <img
+                                src="images/${imageFile.trim()}"
+                                alt="${villageName}"
+                            >
+                        `;
+                
+                    });
+                
+                    popupContent += `
+                        </div>
+                    `;
+                }
+
+                
                 if (imageFile) {
 
                     popupContent += `
