@@ -107,3 +107,17 @@ body,
     width: 100%;
     margin-top: 0;
 }
+
+
+.image-gallery {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    margin-top: 8px;
+}
+
+.image-gallery img {
+    height: 150px;
+    width: auto;
+    border-radius: 4px;
+}
