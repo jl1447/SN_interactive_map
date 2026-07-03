@@ -50,7 +50,10 @@ export async function loadVillages(map) {
 
                 const imageFile =
                     feature.properties?.IMAGE;
-
+                
+                const images =
+                    feature.properties?.IMAGES;
+                
                 console.log(villageName);
                 console.log(audioFile);
                 console.log(feature.properties);
@@ -91,10 +94,6 @@ export async function loadVillages(map) {
                         </audio>
                     `;
                 }
-
-                
-                const images =
-                    feature.properties?.IMAGES;
                 
                 if (images) {
                 
