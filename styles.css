@@ -68,18 +68,6 @@ body,
     border-radius: 4px;
 }
 
-.audio-play-btn {
-    background-color: #D23929;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 12px;
-    font-family: Tahoma, sans-serif;
-    font-size: 12px;
-    cursor: pointer;
-    width: 100%;
-}
-
 .audio-play-btn:hover {
     opacity: 0.9;
 }
