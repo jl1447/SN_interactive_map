@@ -50,6 +50,9 @@ export async function loadVillages(map) {
 
                 const images =
                     feature.properties?.IMAGES;
+
+                const videoFile =
+                    feature.properties?.VIDEO;
                 
                 console.log(villageName);
                 console.log(audioFile);
@@ -91,7 +94,25 @@ export async function loadVillages(map) {
                         </audio>
                     `;
                 }
+
+                if (videoFile) {
                 
+                    popupContent += `
+                        <br><br>
+                
+                        <video
+                            controls
+                            preload="metadata"
+                            class="popup-video"
+                        >
+                            }"
+                                type="video/mp4"
+                            >
+                            Your browser does not support video.
+                        </video>
+                    `;
+                }
+
                 if (images) {
                 
                     popupContent += `
