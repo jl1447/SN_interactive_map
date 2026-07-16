@@ -139,6 +139,8 @@ export async function loadVillages(map) {
                     `;
                 }
 
+                popupContent += `</div>`;
+                
                 layer.bindPopup(popupContent, {
                     maxWidth: 300,
                     minWidth: 300
