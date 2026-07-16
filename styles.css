@@ -19,6 +19,15 @@
     opacity: 0.9;
 }
 
+.clickable-title {
+    cursor: pointer;
+}
+
+.clickable-title:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
 html,
 body,
 #map {
