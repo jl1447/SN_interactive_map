@@ -104,14 +104,14 @@ body,
 
 .popup-scroll-container {
     width: 340px;
-    max-width: 450px;
+    
     height: 400px;
     overflow-y: auto;
     overflow-x: hidden;
 }
 
 .popup-video {
-    width: 100%;
+    width: 340px;
     max-height: 220px;
 }
 
