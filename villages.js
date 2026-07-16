@@ -53,7 +53,8 @@ export async function loadVillages(map) {
 
                 const videoFile =
                     feature.properties?.VIDEO;
-                
+
+                console.log("Video file:", videoFile);
                 console.log(villageName);
                 console.log(audioFile);
                 console.log(feature.properties);
