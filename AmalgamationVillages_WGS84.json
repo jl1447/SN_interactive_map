@@ -283,7 +283,7 @@
         "VILNAME_S": "Xwmélch’sten",
         "AUDIO": "./audio/TestSound.mp3",
         "IMAGES": "space_dolphins.jpg,orange_slice.png,coffee_book.jpg",
-        "VIDEO": "./video/cedar_tree2.mp4",
+        "VIDEO": "cedar_tree2.mp4",
         "GlobalID": "{A358413D-CA67-4958-8E64-9FB434046507}"
       }
     },
