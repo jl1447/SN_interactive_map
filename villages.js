@@ -106,7 +106,7 @@ export async function loadVillages(map) {
                             preload="metadata"
                             class="popup-video"
                         >
-                            ${videoFile}video/mp4"
+                            ${videoFile}
                             >
                             Your browser does not support video.
                         </video>
