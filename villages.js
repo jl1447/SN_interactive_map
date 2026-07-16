@@ -107,8 +107,8 @@ export async function loadVillages(map) {
                             class="popup-video"
                         >
                             <source
-                            src="${videoFile}"
-                            type="video/mp4"
+                                src="${videoFile}"
+                                type="video/mp4"
                             >
                             Your browser does not support video.
                         </video>
