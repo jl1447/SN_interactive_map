@@ -121,3 +121,10 @@ body,
     width: auto;
     border-radius: 4px;
 }
+
+.popup-video {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 8px;
+    border-radius: 4px;
+}
