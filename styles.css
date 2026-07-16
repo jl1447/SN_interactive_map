@@ -1,3 +1,24 @@
+.audio-play-btn {
+    background-color: #D23929;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-family: Tahoma, sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 0;
+}
+
+.audio-play-btn:active {
+    transform: scale(0.98);
+}
+
+.audio-play-btn:hover {
+    opacity: 0.9;
+}
+
 html,
 body,
 #map {
@@ -7,20 +28,29 @@ body,
     height: 100%;
 }
 
+.image-gallery {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    margin-top: 8px;
+}
+
+.image-gallery img {
+    height: 150px;
+    width: auto;
+    border-radius: 4px;
+}
+
 .leaflet-container {
     background: white;
 }
 
-.logo-control img {
-    width: 180px;
-    opacity: 0.8;
-    pointer-events: none;
+.leaflet-popup-close-button {
+    color: #000000 !important;
 }
 
-.leaflet-popup-content-wrapper {
-    background: #D23929;
-    color: #FFFFFF;
-    font-family: Tahoma, sans-serif;
+.leaflet-popup-close-button:hover {
+    color: #000000 !important;
 }
 
 .leaflet-popup-content {
@@ -43,21 +73,25 @@ body,
     margin-bottom: 8px;
 }
 
-.leaflet-popup-tip {
+.leaflet-popup-content-wrapper {
     background: #D23929;
-}
-
-.leaflet-popup-close-button {
-    color: #000000 !important;
-}
-
-.leaflet-popup-close-button:hover {
-    color: #000000 !important;
+    color: #FFFFFF;
+    font-family: Tahoma, sans-serif;
 }
 
 .leaflet-popup audio {
     width: 100%;
     margin-top: 8px;
+}
+
+.leaflet-popup-tip {
+    background: #D23929;
+}
+
+.logo-control img {
+    width: 180px;
+    opacity: 0.8;
+    pointer-events: none;
 }
 
 .popup-image {
@@ -68,12 +102,17 @@ body,
     border-radius: 4px;
 }
 
-.audio-play-btn:hover {
-    opacity: 0.9;
+.popup-scroll-container {
+    width: 340px;
+    max-width: 450px;
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-.audio-play-btn:active {
-    transform: scale(0.98);
+.popup-video {
+    width: 100%;
+    max-height: 220px;
 }
 
 .village-title {
@@ -83,44 +122,4 @@ body,
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 4px;
-}
-
-.audio-play-btn {
-    background-color: #D23929;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 12px;
-    font-family: Tahoma, sans-serif;
-    font-size: 12px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 0;
-}
-
-
-.image-gallery {
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    margin-top: 8px;
-}
-
-.image-gallery img {
-    height: 150px;
-    width: auto;
-    border-radius: 4px;
-}
-
-.popup-video {
-    width: 100%;
-    max-height: 220px;
-}
-
-.popup-scroll-container {
-    width: 340px;
-    max-width: 450px;
-    height: 400px;
-    overflow-y: auto;
-    overflow-x: hidden;
 }
