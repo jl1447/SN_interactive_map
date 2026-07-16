@@ -95,6 +95,7 @@ export async function loadVillages(map) {
                     `;
                 }
 
+                
                 if (videoFile) {
                 
                     popupContent += `
@@ -106,12 +107,11 @@ export async function loadVillages(map) {
                             class="popup-video"
                         >
                             ${videoFile}
-                                type="video/mp4"
-                            >
                             Your browser does not support video.
                         </video>
                     `;
                 }
+
 
                 if (images) {
                 
