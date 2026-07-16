@@ -1,6 +1,7 @@
 import { createMap } from "./map.js";
 import { loadBoundary } from "./boundary.js";
 import { loadVillages } from "./villages.js";
+import { loadSasquatch } from "./sasquatch.js";
 import { addLogo } from "./logo.js";
 
 async function initializeMap() {
@@ -12,6 +13,8 @@ async function initializeMap() {
         await loadBoundary(map);
 
         await loadVillages(map);
+
+        await loadSasquatch(map);
 
         addLogo(map);
 
