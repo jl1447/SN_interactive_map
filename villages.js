@@ -63,6 +63,28 @@ export async function loadVillages(map) {
                     <div class="popup-scroll-container">
                         <div class="village-title">${villageName}</div>
                 `;
+
+                let videoId = null;
+                if (videoFile) {
+
+                    const videoId = `video-${feature.id}`;
+                    popupContent += `
+                        <br><br>
+                
+                        <video
+                            controls
+                            id="${videoId}"
+                            preload="metadata"
+                            class="popup-video"
+                        >
+                            <source
+                                src="video/${videoFile.trim()}"
+                                type="video/mp4"
+                            >
+                            Your browser does not support video.
+                        </video>
+                    `;
+                }
                 
                 if (audioFile) {
 
@@ -95,28 +117,6 @@ export async function loadVillages(map) {
                                 type="audio/mpeg"
                             >
                         </audio>
-                    `;
-                }
-
-                let videoId = null;
-                if (videoFile) {
-
-                    const videoId = `video-${feature.id}`;
-                    popupContent += `
-                        <br><br>
-                
-                        <video
-                            controls
-                            id="${videoId}"
-                            preload="metadata"
-                            class="popup-video"
-                        >
-                            <source
-                                src="video/${videoFile.trim()}"
-                                type="video/mp4"
-                            >
-                            Your browser does not support video.
-                        </video>
                     `;
                 }
 
