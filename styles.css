@@ -52,6 +52,7 @@ body,
 .leaflet-popup-close-button:hover {
     color: #000000 !important;
 }
+
 .leaflet-popup-content {
     color: #ffffff;
     font-family: Tahoma, sans-serif;
@@ -98,16 +99,18 @@ body,
     border-radius: 4px;
 }
 
+
 .popup-scroll-container {
     width: 340px;
-    height: 400px;
+    height: 260px;
     overflow-y: auto;
     overflow-x: hidden;
 }
 
 .popup-video {
     width: 100%;
-    height: auto;
+    height: 220px;
+    object-fit: cover;
     border-radius: 4px;
 }
 
@@ -117,5 +120,6 @@ body,
     font-family: Tahoma, sans-serif;
     font-size: 16px;
     font-weight: bold;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
 }
+
