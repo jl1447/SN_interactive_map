@@ -61,9 +61,25 @@ export async function loadVillages(map) {
 
                 let popupContent = `
                     <div class="popup-scroll-container">
-                        <div class="village-title">
+                        
+                    const audioId = `audio-${feature.id}`;
+                    
+                    popupContent += `
+                        <div
+                            class="village-title clickable-title"
+                            onclick="
+                                const audio = document.getElementById('${audioId}');
+                    
+                                if (audio) {
+                                    audio.currentTime = 0;
+                                    audio.play();
+                                }
+                            "
+                        >
                             ${villageName}
                         </div>
+                    `;
+
                 `;
 
                 let videoId = null;
@@ -90,32 +106,12 @@ export async function loadVillages(map) {
                 
                 if (audioFile) {
 
-                    const audioId = `audio-${feature.id}`;
-
                     popupContent += `
-                        <button
-                            class="audio-play-btn"
-                            onclick="
-                                const audio = document.getElementById('${audioId}');
-
-                                if (audio.paused) {
-                                    audio.play();
-                                    this.innerText = '⏸ Pause';
-                                } else {
-                                    audio.pause();
-                                    this.innerText = '▶ Listen to Pronunciation';
-                                }
-                            "
-                        >
-                            ▶ Listen to Pronunciation
-                        </button>
-
                         <audio
                             id="${audioId}"
                             preload="none"
                         >
-                            <source
-                                src="${audioFile}"
+                            audioFile}"
                                 type="audio/mpeg"
                             >
                         </audio>
