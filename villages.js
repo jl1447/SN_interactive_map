@@ -61,7 +61,9 @@ export async function loadVillages(map) {
 
                 let popupContent = `
                     <div class="popup-scroll-container">
-                        <div class="village-title">${villageName}</div>
+                        <div class="village-title">
+                            ${villageName}
+                        </div>
                 `;
 
                 let videoId = null;
@@ -164,9 +166,9 @@ export async function loadVillages(map) {
                 
                 });
                 
+
                 layer.bindPopup(popupContent, {
-                    maxWidth: 300,
-                    minWidth: 300
+                    maxWidth: 380
                 });
             }
 
