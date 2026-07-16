@@ -40,132 +40,129 @@ export async function loadVillages(map) {
             },
 
             onEachFeature(feature, layer) {
-
+            
                 const villageName =
                     feature.properties?.VILNAME_S ||
                     "Unknown Village";
-
+            
                 const audioFile =
                     feature.properties?.AUDIO;
-
+            
                 const images =
                     feature.properties?.IMAGES;
-
+            
                 const videoFile =
                     feature.properties?.VIDEO;
-
-                console.log("Video file:", videoFile);
-                console.log(villageName);
-                console.log(audioFile);
-                console.log(feature.properties);
-
+            
+                const audioId =
+                    `audio-${feature.id}`;
+            
+                let videoId = null;
+            
                 let popupContent = `
                     <div class="popup-scroll-container">
-                        
-                    const audioId = `audio-${feature.id}`;
-                    
-                    popupContent += `
+            
                         <div
                             class="village-title clickable-title"
                             onclick="
-                                const audio = document.getElementById('${audioId}');
-                    
+                                const audio =
+                                    document.getElementById('${audioId}');
+            
                                 if (audio) {
                                     audio.currentTime = 0;
                                     audio.play();
                                 }
                             "
                         >
+                            ${audioFile ? "🔊 " : ""}
                             ${villageName}
                         </div>
-                    `;
-
                 `;
-
-                let videoId = null;
+            
                 if (videoFile) {
-
-                    const videoId = `video-${feature.id}`;
+            
+                    videoId = `video-${feature.id}`;
+            
                     popupContent += `
-                        <br><br>
-                
                         <video
                             controls
                             id="${videoId}"
                             preload="metadata"
                             class="popup-video"
                         >
-                            <source
-                                src="video/${videoFile.trim()}"
+                            video/${videoFile.trim()}"
                                 type="video/mp4"
                             >
                             Your browser does not support video.
                         </video>
                     `;
                 }
-                
+            
                 if (audioFile) {
-
+            
                     popupContent += `
                         <audio
                             id="${audioId}"
                             preload="none"
                         >
-                            audioFile}"
-                                type="audio/mpeg"
+                            ${audioFile}                    type="audio/mpeg"
                             >
                         </audio>
                     `;
                 }
-
+            
                 if (images) {
-                
+            
                     popupContent += `
                         <div class="image-gallery">
                     `;
-                
+            
                     images.split(",").forEach(imageFile => {
-                
+            
                         popupContent += `
-                            <img
-                                src="images/${imageFile.trim()}"
-                                alt="${villageName}"
+                            images/${imageFile.trim()}}"
                             >
                         `;
-                
                     });
-                
+            
                     popupContent += `
                         </div>
                     `;
                 }
-
-                popupContent += `</div>`;
-
+            
+                popupContent += `
+                    </div>
+                `;
+            
                 layer.on("popupopen", () => {
-
+            
+                    if (!videoId) {
+                        return;
+                    }
+            
                     const video =
                         document.getElementById(videoId);
-                
+            
                     if (video) {
-                
+            
                         video.play().catch(error => {
-                
+            
                             console.log(
                                 "Autoplay prevented:",
                                 error
                             );
-                
+            
                         });
-                
+            
                     }
-                
+            
                 });
-                
+            
                 layer.bindPopup(popupContent, {
                     minWidth: 360,
                     maxWidth: 360
                 });
+            
             }
 
         }).addTo(map);
