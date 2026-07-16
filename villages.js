@@ -97,7 +97,8 @@ export async function loadVillages(map) {
                         </audio>
                     `;
                 }
-  
+
+                let videoId = null;
                 if (videoFile) {
 
                     const videoId = `video-${feature.id}`;
