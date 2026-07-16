@@ -99,12 +99,14 @@ export async function loadVillages(map) {
                 }
   
                 if (videoFile) {
-                
+
+                    const videoId = `video-${feature.id}`;
                     popupContent += `
                         <br><br>
                 
                         <video
                             controls
+                            id="${videoId}"
                             preload="metadata"
                             class="popup-video"
                         >
@@ -140,6 +142,26 @@ export async function loadVillages(map) {
                 }
 
                 popupContent += `</div>`;
+
+                layer.on("popupopen", () => {
+
+                    const video =
+                        document.getElementById(videoId);
+                
+                    if (video) {
+                
+                        video.play().catch(error => {
+                
+                            console.log(
+                                "Autoplay prevented:",
+                                error
+                            );
+                
+                        });
+                
+                    }
+                
+                });
                 
                 layer.bindPopup(popupContent, {
                     maxWidth: 300,
