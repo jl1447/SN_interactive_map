@@ -59,8 +59,10 @@ export async function loadVillages(map) {
                 console.log(audioFile);
                 console.log(feature.properties);
 
-                let popupContent =
-                    `<div class="village-title">${villageName}</div>`;
+                let popupContent = `
+                    <div class="popup-scroll-container">
+                        <div class="village-title">${villageName}</div>
+                `;
                 
                 if (audioFile) {
 
@@ -137,7 +139,10 @@ export async function loadVillages(map) {
                     `;
                 }
 
-                layer.bindPopup(popupContent);
+                layer.bindPopup(popupContent, {
+                    maxWidth: 300,
+                    minWidth: 300
+                });
             }
 
         }).addTo(map);
