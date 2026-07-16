@@ -166,9 +166,9 @@ export async function loadVillages(map) {
                 
                 });
                 
-
                 layer.bindPopup(popupContent, {
-                    maxWidth: 380
+                    minWidth: 360,
+                    maxWidth: 360
                 });
             }
 
