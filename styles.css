@@ -175,10 +175,3 @@ body,
 .popup-scroll-container {
     margin-top: 20px;
 }
-
-/* FIX: Changed margin-left from 370px to 480px so map controls sit 
-   clearly outside your 460px wide sidebar panel */
-.leaflet-left .leaflet-control {
-    margin-left: 480px; 
-    transition: margin-left 0.2s ease;
-}
