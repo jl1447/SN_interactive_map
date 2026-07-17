@@ -120,7 +120,7 @@ export async function loadVillages(map) {
                     images.split(",").forEach(imageFile => {
             
                         popupContent += `
-                            images/${imageFile.trim()}}"
+                            ${imageFile.trim()}}"
                             >
                         `;
                     });
