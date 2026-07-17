@@ -13,7 +13,16 @@
 </head>
 <body>
 
-    <div id="map"></div>
+    <div id="container" style="display: flex; height: 100vh; width: 100vw;">
+        <!-- Your Map -->
+        <div id="map" style="flex: 1; height: 100%;"></div>
+        
+        <!-- The Side Panel (Initially Hidden) -->
+        <div id="sidebar-panel" style="display: none;">
+            <button id="close-sidebar" onclick="closeSidebar()">✕</button>
+            <div id="sidebar-content"></div>
+        </div>
+    </div>
 
     <script
         src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
