@@ -13,15 +13,17 @@
 </head>
 <body>
 
-    <div id="container" style="display: flex; height: 100vh; width: 100vw;">
+    <div id="container" style="display: flex; height: 100vh; width: 100vw; position: relative;">
+        
+        <!-- The Side Panel (Always visible, styles handled by styles.css) -->
+        <div id="sidebar-panel">
+            <button id="close-sidebar" onclick="window.clearSidebar()">✕</button>
+            <div id="sidebar-content"></div>
+        </div>
+
         <!-- Your Map -->
         <div id="map" style="flex: 1; height: 100%;"></div>
         
-        <!-- The Side Panel (Initially Hidden) -->
-        <div id="sidebar-panel" style="display: none;">
-            <button id="close-sidebar" onclick="closeSidebar()">✕</button>
-            <div id="sidebar-content"></div>
-        </div>
     </div>
 
     <script
