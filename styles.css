@@ -140,12 +140,13 @@ body,
 #sidebar-panel {
     position: absolute;
     top: 0;
-    left: 0; /* Pins the panel to the left side */
-    width: 350px; /* Adjust width as needed */
+    left: 0;
+    width: 350px;
     height: 100%;
-    background-color: white;
-    z-index: 1000; /* Ensures it sits above the Leaflet map */
-    box-shadow: 2px 0 10px rgba(0,0,0,0.3); /* Shadow on the right side */
+    background-color: #D23929; /* Updated background to red */
+    color: #FFFFFF; /* Flips general text color to white for contrast */
+    z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.15);
     display: block;
     overflow-y: auto;
     box-sizing: border-box;
