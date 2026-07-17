@@ -105,7 +105,7 @@ export async function loadVillages(map) {
                             id="${audioId}"
                             preload="none"
                         >
-                            ${audioFile}                    type="audio/mpeg"
+                            ${audioFile}                    type="audio/mp3"
                             >
                         </audio>
                     `;
