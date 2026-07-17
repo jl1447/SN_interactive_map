@@ -103,17 +103,6 @@ export async function loadVillages(map) {
                 </div>
             `;
 
-            // Handle Autoplay safely on open
-            layer.on("popupopen", () => {
-                if (!videoId) return;
-                const video = document.getElementById(videoId);
-                if (video) {
-                    video.play().catch(error => {
-                        console.log("Autoplay prevented:", error);
-                    });
-                }
-            });
-
             // Bind the clean HTML string to the Leaflet Popup
             layer.bindPopup(popupContent, {
                 minWidth: 360,
