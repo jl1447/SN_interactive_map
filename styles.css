@@ -128,9 +128,11 @@ body,
     margin-top: 0;
 }
 
+/* ... Keep everything above .village-title exactly the same ... */
+
 .village-title {
     text-align: center;
-    color: #000000;
+    color: #FFFFFF; /* CHANGED to white so it's readable on the red background */
     font-family: Tahoma, sans-serif;
     font-size: 16px;
     font-weight: bold;
@@ -141,10 +143,10 @@ body,
     position: absolute;
     top: 0;
     left: 0;
-    width: 460px;
+    width: 460px; /* Panel width is 460px */
     height: 100%;
-    background-color: #D23929; /* Updated background to red */
-    color: #FFFFFF; /* Flips general text color to white for contrast */
+    background-color: #D23929;
+    color: #FFFFFF;
     z-index: 1000;
     box-shadow: 2px 0 10px rgba(0,0,0,0.15);
     display: block;
@@ -155,19 +157,28 @@ body,
 
 #close-sidebar {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
     background: none;
     border: none;
-    font-size: 18px;
+    color: #FFFFFF; /* Ensures the close 'X' stays white */
+    font-size: 20px;
     cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+#close-sidebar:hover {
+    opacity: 1;
 }
 
 .popup-scroll-container {
     margin-top: 20px;
 }
 
+/* FIX: Changed margin-left from 370px to 480px so map controls sit 
+   clearly outside your 460px wide sidebar panel */
 .leaflet-left .leaflet-control {
-    margin-left: 370px; /* Pushes map controls out from behind the sidebar when open */
+    margin-left: 480px; 
     transition: margin-left 0.2s ease;
 }
