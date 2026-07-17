@@ -45,19 +45,13 @@ export async function loadVillages(map) {
             const videoFile = feature.properties?.VIDEO;
             const audioId = `audio-${feature.id}`;
 
-            // Fixed Header Section: Styled with white borders and text to pop off the red background
+            // Line breaks removed inside the inline onclick string to avoid syntax crashes
             let sidebarHTML = `
                 <div class="sidebar-header" style="border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 12px; margin-bottom: 16px;">
                     <div
                         class="village-title clickable-title"
-                        style="cursor: pointer; font-size: 1.6em; font-weight: bold; display: flex; align-items: center; gap: 8px; color: #FFFFFF;"
-                        onclick="
-                            const audio = document.getElementById('${audioId}');
-                            if (audio) {
-                                audio.currentTime = 0;
-                                audio.play();
-                            }
-                        "
+                        style="cursor: pointer; font-size: 1.6em; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 8px; color: #FFFFFF;"
+                        onclick="const audio = document.getElementById('${audioId}'); if (audio) { audio.currentTime = 0; audio.play(); }"
                         title="Click to hear pronunciation"
                     >
                         ${audioFile ? "<span style='font-size: 0.9em;'>🔊</span>" : ""}
