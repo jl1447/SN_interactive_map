@@ -3,7 +3,7 @@ window.clearSidebar = function() {
     const content = document.getElementById("sidebar-content");
     if (content) {
         content.innerHTML = `
-            <div style="color: #666; text-align: center; margin-top: 40px; font-style: italic;">
+            <div style="color: rgba(255, 255, 255, 0.8); text-align: center; margin-top: 40px; font-style: italic;">
                 Select a village on the map to view details.
             </div>
         `;
@@ -45,12 +45,12 @@ export async function loadVillages(map) {
             const videoFile = feature.properties?.VIDEO;
             const audioId = `audio-${feature.id}`;
 
-            // 1. Fixed Header Section: Combines Title + Audio Button into one clean, clickable row at the top
+            // Fixed Header Section: Styled with white borders and text to pop off the red background
             let sidebarHTML = `
-                <div class="sidebar-header" style="border-bottom: 1px solid #eee; padding-bottom: 12px; margin-bottom: 16px;">
+                <div class="sidebar-header" style="border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 12px; margin-bottom: 16px;">
                     <div
                         class="village-title clickable-title"
-                        style="cursor: pointer; font-size: 1.6em; font-weight: bold; display: flex; align-items: center; gap: 8px; color: #111;"
+                        style="cursor: pointer; font-size: 1.6em; font-weight: bold; display: flex; align-items: center; gap: 8px; color: #FFFFFF;"
                         onclick="
                             const audio = document.getElementById('${audioId}');
                             if (audio) {
@@ -67,7 +67,6 @@ export async function loadVillages(map) {
                 <div class="popup-scroll-container">
             `;
 
-            // 2. Main Media Content Section
             if (videoFile && videoFile.trim() !== "") {
                 sidebarHTML += `
                     <video controls preload="metadata" class="popup-video" style="width: 100%; margin-top: 8px; border-radius: 4px;">
@@ -77,7 +76,6 @@ export async function loadVillages(map) {
                 `;
             }
 
-            // Hidden audio element triggered by clicking the header row above
             if (audioFile && audioFile.trim() !== "") {
                 sidebarHTML += `
                     <audio id="${audioId}" preload="none">
@@ -109,7 +107,6 @@ export async function loadVillages(map) {
         }
     }).addTo(map);
 
-    // Reset to placeholder content if user clicks anywhere else on the blank map
     map.on("click", () => {
         window.clearSidebar();
     });
