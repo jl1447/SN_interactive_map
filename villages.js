@@ -1,12 +1,12 @@
-// Global helper function to close the sidebar (put this in your main script scope)
-window.closeSidebar = function() {
-    const sidebar = document.getElementById("sidebar-panel");
-    if (sidebar) {
-        sidebar.style.display = "none";
-        
-        // Optional: Stop any playing audio/video when closed
-        const content = document.getElementById("sidebar-content");
-        content.innerHTML = ""; 
+// Global helper function to clear sidebar content (instead of hiding the panel)
+window.clearSidebar = function() {
+    const content = document.getElementById("sidebar-content");
+    if (content) {
+        content.innerHTML = `
+            <div style="color: #666; text-align: center; margin-top: 40px; font-style: italic;">
+                Select a village on the map to view details.
+            </div>
+        `;
     }
 };
 
@@ -16,6 +16,9 @@ export async function loadVillages(map) {
     if (!response.ok) {
         throw new Error(`Could not load villages (${response.status})`);
     }
+
+    // Initialize the sidebar with the placeholder on load
+    window.clearSidebar();
 
     const villageData = await response.json();
 
@@ -89,25 +92,20 @@ export async function loadVillages(map) {
 
             sidebarHTML += `</div>`;
 
-            // REMOVED bindPopup. REPLACED with custom click listener:
             layer.on("click", (e) => {
-                // Prevent map default behaviors
                 L.DomEvent.stopPropagation(e);
-
-                const sidebar = document.getElementById("sidebar-panel");
                 const content = document.getElementById("sidebar-content");
 
-                if (sidebar && content) {
-                    content.innerHTML = sidebarHTML;
-                    sidebar.style.display = "block"; // Show sidebar
+                if (content) {
+                    content.innerHTML = sidebarHTML; // Simply swap out the inner HTML content
                 }
             });
         }
     }).addTo(map);
 
-    // Close sidebar if user clicks anywhere else on the blank map
+    // Reset to placeholder content if user clicks anywhere else on the blank map
     map.on("click", () => {
-        closeSidebar();
+        window.clearSidebar();
     });
 
     villageLayer.bringToFront();
