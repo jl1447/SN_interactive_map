@@ -45,11 +45,12 @@ export async function loadVillages(map) {
             const videoFile = feature.properties?.VIDEO;
             const audioId = `audio-${feature.id}`;
 
+            // 1. Fixed Header Section: Combines Title + Audio Button into one clean, clickable row at the top
             let sidebarHTML = `
-                <div class="popup-scroll-container">
+                <div class="sidebar-header" style="border-bottom: 1px solid #eee; padding-bottom: 12px; margin-bottom: 16px;">
                     <div
                         class="village-title clickable-title"
-                        style="cursor: pointer; font-size: 1.5em; font-weight: bold; margin-bottom: 12px;"
+                        style="cursor: pointer; font-size: 1.6em; font-weight: bold; display: flex; align-items: center; gap: 8px; color: #111;"
                         onclick="
                             const audio = document.getElementById('${audioId}');
                             if (audio) {
@@ -57,21 +58,26 @@ export async function loadVillages(map) {
                                 audio.play();
                             }
                         "
+                        title="Click to hear pronunciation"
                     >
-                        ${audioFile ? "🔊 " : ""}
-                        ${villageName}
+                        ${audioFile ? "<span style='font-size: 0.9em;'>🔊</span>" : ""}
+                        <span>${villageName}</span>
                     </div>
+                </div>
+                <div class="popup-scroll-container">
             `;
 
+            // 2. Main Media Content Section
             if (videoFile && videoFile.trim() !== "") {
                 sidebarHTML += `
-                    <video controls preload="metadata" class="popup-video" style="width: 100%; margin-top: 8px;">
+                    <video controls preload="metadata" class="popup-video" style="width: 100%; margin-top: 8px; border-radius: 4px;">
                         <source src="video/${videoFile.trim()}" type="video/mp4">
                         Your browser does not support video.
                     </video>
                 `;
             }
 
+            // Hidden audio element triggered by clicking the header row above
             if (audioFile && audioFile.trim() !== "") {
                 sidebarHTML += `
                     <audio id="${audioId}" preload="none">
@@ -81,10 +87,10 @@ export async function loadVillages(map) {
             }
 
             if (images && images.trim() !== "") {
-                sidebarHTML += `<div class="image-gallery" style="display: flex; gap: 5px; flex-wrap: wrap; margin-top: 8px;">`;
+                sidebarHTML += `<div class="image-gallery" style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px;">`;
                 images.split(",").forEach(imageFile => {
                     if (imageFile.trim() !== "") {
-                        sidebarHTML += `<img src="images/${imageFile.trim()}" alt="${villageName}" style="max-width: 100%; height: auto;" />`;
+                        sidebarHTML += `<img src="images/${imageFile.trim()}" alt="${villageName}" style="max-width: 100%; height: auto; border-radius: 4px;" />`;
                     }
                 });
                 sidebarHTML += `</div>`;
@@ -97,7 +103,7 @@ export async function loadVillages(map) {
                 const content = document.getElementById("sidebar-content");
 
                 if (content) {
-                    content.innerHTML = sidebarHTML; // Simply swap out the inner HTML content
+                    content.innerHTML = sidebarHTML;
                 }
             });
         }
