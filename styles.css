@@ -138,15 +138,18 @@ body,
 }
 
 #sidebar-panel {
-    width: 360px;
+    position: absolute;
+    top: 0;
+    left: 0; /* Pins the panel to the left side */
+    width: 350px; /* Adjust width as needed */
     height: 100%;
-    background: white;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
-    z-index: 1000; /* Ensure it stays on top of map elements if overlapping */
-    position: relative;
-    padding: 20px;
-    box-sizing: border-box;
+    background-color: white;
+    z-index: 1000; /* Ensures it sits above the Leaflet map */
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3); /* Shadow on the right side */
+    display: none; /* Hidden by default */
     overflow-y: auto;
+    box-sizing: border-box;
+    padding: 20px;
 }
 
 #close-sidebar {
@@ -162,3 +165,7 @@ body,
 .popup-scroll-container {
     margin-top: 20px;
 }
+
+.leaflet-left .leaflet-control {
+    margin-left: 370px; /* Pushes map controls out from behind the sidebar when open */
+    transition: margin-left 0.2s ease;
