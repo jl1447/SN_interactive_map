@@ -63,7 +63,7 @@ export async function loadVillages(map) {
 
             if (videoFile && videoFile.trim() !== "") {
                 sidebarHTML += `
-                    <video controls preload="metadata" class="popup-video" style="width: 100%; margin-top: 8px; border-radius: 4px;">
+                    <video controls preload="metadata" class="popup-video">
                         <source src="video/${videoFile.trim()}" type="video/mp4">
                         Your browser does not support video.
                     </video>
