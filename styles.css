@@ -39,20 +39,36 @@ body,
 
 .image-gallery {
     display: flex;
-    justify-content: center;
-    gap: 8px;
-    flex-wrap: wrap;       /* Allows multiple images to grid down nicely */
-    width: 95%;            /* Matches the width of the video */
-    max-width: 670px;      /* Matches the maximum video ceiling */
-    margin: 15px auto 0 auto; /* Centers the whole gallery block inside the panel */
+    flex-direction: column; /* Stacks the images and their text cleanly down the sidebar */
+    align-items: center;
+    gap: 20px;              /* Adds vertical space between separate image blocks */
+    width: 95%;            
+    max-width: 670px;      
+    margin: 15px auto 0 auto; 
+}
+
+.gallery-item {
+    width: 100%;            /* Forces the wrapper item to match the video span width */
+    text-align: center;
 }
 
 .image-gallery img {
-    width: 100%;           /* Instructs single images to fill the full container block */
-    max-width: 100%;       /* Ensures it won't overflow the container */
-    height: auto;          /* Maintains the image's original aspect ratio */
+    width: 100%;           
+    max-width: 100%;       
+    height: auto;          
     border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Matches the sleek video shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    display: block;         /* Removes inline bottom whitespace quirks */
+}
+
+.image-caption {
+    display: block;
+    font-family: Tahoma, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.9); /* High contrast readable off-white text */
+    margin-top: 8px;                 /* Clean spacing directly under the picture frame */
+    word-wrap: break-word;          /* Safely wraps long file names without breaking layouts */
 }
 
 .leaflet-container {
