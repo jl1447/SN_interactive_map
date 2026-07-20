@@ -37,7 +37,7 @@
         "VILNAME_S": "Ch’éḵch’eḵts",
         "AUDIO": "./audio/Chekchekts.m4a",
         "IMAGES": "",
-        "VIDEO": "FO_Chekchekts.mp4",
+        "VIDEO": "",
         "GlobalID": "{839746CB-7B42-43E1-B5FF-68E6FA0924CA}"
       }
     },
@@ -297,7 +297,7 @@
         "VILNAME_S": "Xwmélch’sten",
         "AUDIO": "./audio/Xwmelchsten.m4a",
         "IMAGES": "Graveyard in Capilano xwemelchstn 1900.jpg",
-        "VIDEO": "cedar_tree2.mp4",
+        "VIDEO": "",
         "GlobalID": "{A358413D-CA67-4958-8E64-9FB434046507}"
       }
     },
