@@ -5,33 +5,40 @@ import { loadSasquatch } from "./sasquatch.js";
 import { addLogo } from "./logo.js";
 
 async function initializeMap() {
+    let map;
+
+    // 1. Core Map Setup (Must succeed)
+    try {
+        map = createMap();
+        addLogo(map);
+    } catch (error) {
+        console.error("Critical failure: Could not initialize base map structure.", error);
+        return; // Stop if the actual map initialization fails
+    }
+
+    // 2. Data Layers (Isolated so one failure won't crash the whole app)
+    try {
+        await loadBoundary(map);
+        console.log("Boundary layer loaded.");
+    } catch (error) {
+        console.error("Failed to load boundary data:", error);
+    }
 
     try {
-
-        const map = createMap();
-
-        await loadBoundary(map);
-
         await loadVillages(map);
+        console.log("Villages layer loaded.");
+    } catch (error) {
+        console.error("Failed to load village data:", error);
+    }
 
+    try {
         await loadSasquatch(map);
-
-        addLogo(map);
-
-        console.log(
-            "Squamish Nation Territory Viewer loaded."
-        );
-
-    }
-    catch (error) {
-
-        console.error(
-            "Application startup failed:",
-            error
-        );
-
+        console.log("Sasquatch layer loaded.");
+    } catch (error) {
+        console.error("Failed to load Sasquatch data:", error);
     }
 
+    console.log("Squamish Nation Territory Viewer initialization sequence finished.");
 }
 
 initializeMap();
