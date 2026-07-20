@@ -169,7 +169,7 @@ body,
       url("./images/log_sign.webp"); 
     
     /* Configures the background scaling rules */
-    background-size: 95%;        /* Scales the webp asset to perfectly cover the area */
+    background-size: contain;        /* Scales the webp asset to perfectly cover the area */
     background-position: center;   /* Keeps the focus centered */
     background-repeat: no-repeat;
     
