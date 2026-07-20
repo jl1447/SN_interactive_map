@@ -151,6 +151,23 @@ body,
     flex-shrink: 0; /* Prevents the sidebar from shrinking below 750px */
 }
 
+#close-sidebar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #FFFFFF; /* Ensures the close 'X' stays white */
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+ 
+#close-sidebar:hover {
+    opacity: 1;
+}
+
 .popup-scroll-container {
     margin-top: 20px;
 }
