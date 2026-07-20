@@ -10,6 +10,7 @@ async function initializeMap() {
     // 1. Core Map Setup (Must succeed)
     try {
         map = createMap();
+        map.invalidateSize();
         addLogo(map);
     } catch (error) {
         console.error("Critical failure: Could not initialize base map structure.", error);
