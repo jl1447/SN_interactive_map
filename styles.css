@@ -157,8 +157,8 @@ body,
 }
 
 #sidebar-panel {
-    position: relative; /* Changed from absolute */
-    width: 750px; 
+    position: relative; 
+    width: 33%;          /* Changed to take up exactly 1/3 of the screen width */
     height: 100%;
     background-color: #D23929;
     color: #FFFFFF;
@@ -167,7 +167,6 @@ body,
     overflow-y: auto;
     box-sizing: border-box;
     padding: 20px;
-    flex-shrink: 0; /* Prevents the sidebar from shrinking below 750px */
 }
 
 #close-sidebar {
