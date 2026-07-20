@@ -70,6 +70,12 @@ body,
     color: rgba(255, 255, 255, 0.9); /* High contrast readable off-white text */
     margin-top: 8px;                 /* Clean spacing directly under the picture frame */
     word-wrap: break-word;          /* Safely wraps long file names without breaking layouts */
+
+    text-shadow: 
+        -1px -1px 2px #000000,
+         1px -1px 2px #000000,
+        -1px  1px 2px #000000,
+         1px  1px 2px #000000;
 }
 
 .leaflet-container {
