@@ -10,7 +10,6 @@ async function initializeMap() {
     // 1. Core Map Setup (Must succeed)
     try {
         map = createMap();
-        map.invalidateSize();
         addLogo(map);
     } catch (error) {
         console.error("Critical failure: Could not initialize base map structure.", error);
@@ -37,6 +36,12 @@ async function initializeMap() {
         console.log("Sasquatch layer loaded.");
     } catch (error) {
         console.error("Failed to load Sasquatch data:", error);
+    }
+
+    // 3. Recalculate and Recenter Map Bounds
+    // This forces Leaflet to recognize the sidebar's layout footprint and perfectly center the data layers
+    if (map) {
+        map.invalidateSize();
     }
 
     console.log("Squamish Nation Territory Viewer initialization sequence finished.");
