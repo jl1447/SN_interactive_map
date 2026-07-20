@@ -57,9 +57,7 @@ export async function loadSasquatch(map) {
                     <button
                         class="audio-play-btn"
                         onclick="
-                            const audio =
-                                document.getElementById('${audioId}');
-
+                            const audio = document.getElementById('${audioId}');
                             if (audio.paused) {
                                 audio.play();
                                 this.innerText='⏸ Pause';
@@ -75,9 +73,8 @@ export async function loadSasquatch(map) {
                     <audio
                         id="${audioId}"
                         preload="none"
-                    >
-                        ./audio/${audioFile}
-                    </audio>
+                        src="./audio/${audioFile}" 
+                    ></audio>
                 `;
             }
 
