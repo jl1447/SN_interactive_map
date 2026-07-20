@@ -120,12 +120,12 @@ body,
 }
 
 .popup-video {
-    display: block;
-    width: 450px;
-    height: auto;
+    display: block;      /* Ensures the element behaves as a block to allow auto margins to work */
+    width: 95%;          /* Takes up almost the full width */
+    max-width: 680px;    /* Prevents overflowing the 750px panel minus its padding */
+    height: auto;        /* Maintains correct aspect ratio */
+    margin: 15px auto 0 auto; /* Smoothly centers horizontally (auto left/right) and adds a top gap */
     border-radius: 4px;
-    margin: 0 auto;
-    margin-top: 0;
 }
 
 .village-title {
