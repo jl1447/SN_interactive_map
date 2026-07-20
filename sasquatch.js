@@ -10,7 +10,6 @@ export async function loadSasquatch(map) {
         popupAnchor: [0, -48]
     });
 
-    // 1. Create the layer without adding it directly to the map yet
     const layer = L.geoJSON(data, {
 
         pointToLayer(feature, latlng) {
@@ -28,8 +27,11 @@ export async function loadSasquatch(map) {
                 <div>${description}</div>
             `;
 
+            // Explicitly styles the image so Leaflet reserves space for it immediately
             if (imageFile) {
-                popupContent += `<img src="./images/${imageFile}" alt="${name}" class="popup-image" />`;
+                popupContent += `
+                    <img src="./images/${imageFile}" alt="${name}" class="popup-image" style="width: 100%; height: auto; display: block; margin-top: 8px;" />
+                `;
             }
 
             if (audioFile) {
@@ -55,16 +57,17 @@ export async function loadSasquatch(map) {
                 `;
             }
 
-            layer.bindPopup(popupContent, { maxWidth: 300 });
+            layer.bindPopup(popupContent, { maxWidth: 280 });
         }
-    });
+    }); // NOTE: Notice .addTo(map) is intentionally left off here!
 
-    // 2. Define your minimum zoom threshold (e.g., zoom level 13 or higher)
-    const MIN_ZOOM_LEVEL = 13;
+    // Set high zoom threshold (e.g. 15 = close zoom)
+    const MIN_ZOOM_LEVEL = 15; 
 
-    // Helper function to show/hide the layer based on zoom level
     function updateSasquatchVisibility() {
-        if (map.getZoom() >= MIN_ZOOM_LEVEL) {
+        const currentZoom = map.getZoom();
+        
+        if (currentZoom >= MIN_ZOOM_LEVEL) {
             if (!map.hasLayer(layer)) {
                 map.addLayer(layer);
             }
@@ -75,10 +78,10 @@ export async function loadSasquatch(map) {
         }
     }
 
-    // 3. Listen for zoom changes on the map
+    // Attach zoom listener
     map.on("zoomend", updateSasquatchVisibility);
 
-    // 4. Run once on load to establish initial state
+    // Initial check
     updateSasquatchVisibility();
 
     return layer;
