@@ -166,10 +166,10 @@ body,
         rgba(210, 57, 41, 0.88), 
         rgba(210, 57, 41, 0.88)
       ), 
-      url("./images/log_sign.webp"); /* Replace with your actual webp file name */
+      url("./images/log_sign.webp"); 
     
     /* Configures the background scaling rules */
-    background-size: cover;        /* Scales the webp asset to perfectly cover the area */
+    background-size: 95%;        /* Scales the webp asset to perfectly cover the area */
     background-position: center;   /* Keeps the focus centered */
     background-repeat: no-repeat;
     
