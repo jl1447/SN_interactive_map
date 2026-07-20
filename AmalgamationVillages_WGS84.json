@@ -216,7 +216,7 @@
         "ID": "AMVG0000011",
         "VILNAME_S": "St’á7mes",
         "AUDIO": "./audio/Sta7mes.m4a",
-        "IMAGES": "",
+        "IMAGES": "Harriet Harry BBQ on Staamus.jpg, Moses Billy working on canoe Staamus Reserve.jpg, Ronald Billy Staamus Reserve.jpg",
         "VIDEO": "",
         "GlobalID": "{BB81EA33-66E9-4A1D-9506-6BDD869C2F0B}"
       }
@@ -276,7 +276,7 @@
         "ID": "AMVG0000014",
         "VILNAME_S": "Ch’ḵw’élhp",
         "AUDIO": "./audio/Chkwelhp.m4a",
-        "IMAGES": "",
+        "IMAGES": "Chana Taiwaa Howe Sound Chekwelp Reserve1937.jpg",
         "VIDEO": "",
         "GlobalID": "{5291617F-00F5-4102-A9F6-C61702976314}"
       }
@@ -296,7 +296,7 @@
         "ID": "AMVG0000015",
         "VILNAME_S": "Xwmélch’sten",
         "AUDIO": "./audio/Xwmelchsten.m4a",
-        "IMAGES": "",
+        "IMAGES": "Graveyard in Capilano xwemelchstn 1900.jpg",
         "VIDEO": "cedar_tree2.mp4",
         "GlobalID": "{A358413D-CA67-4958-8E64-9FB434046507}"
       }
@@ -316,7 +316,7 @@
         "ID": "AMVG0000016",
         "VILNAME_S": "Eslha7áń",
         "AUDIO": "./audio/Eslha7an.m4a",
-        "IMAGES": "",
+        "IMAGES": "Missiion Village 1908.jpg, The Mission 1886 or 1887.jpg",
         "VIDEO": "",
         "GlobalID": "{86C90D91-C664-4835-A79A-1BB2A0E43716}"
       }
@@ -356,7 +356,7 @@
         "ID": "AMVG0000018",
         "VILNAME_S": "Sen\u0313a\u0301k\u0331w",
         "AUDIO": "./audio/Senakw.m4a",
-        "IMAGES": "",
+        "IMAGES": "Kitsilano IR6 Senakw 1935.jpg, Shacks on shore of Kitsilano 1935.jpg",
         "VIDEO": "",
         "GlobalID": "{BD02E3EF-3D28-4723-B02E-B7FA0AD0A61F}"
       }
@@ -376,7 +376,7 @@
         "ID": "AMVG0000019",
         "VILNAME_S": "Ch’ích’elxwi7ḵw",
         "AUDIO": "./audio/Chichelxwi7kw.m4a",
-        "IMAGES": "",
+        "IMAGES": "House of Chief Jim Harry Seymour Creek Oct 9 1923.jpg, Seymour Creek 1886.jpg",
         "VIDEO": "",
         "GlobalID": "{04D729D2-8B23-46DE-A40C-C83C8A6D7081}"
       }
