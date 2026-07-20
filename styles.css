@@ -66,6 +66,7 @@ body,
     font-family: Tahoma, sans-serif;
     font-size: 13px;
     font-weight: normal;
+    font-style: italic;
     color: rgba(255, 255, 255, 0.9); /* High contrast readable off-white text */
     margin-top: 8px;                 /* Clean spacing directly under the picture frame */
     word-wrap: break-word;          /* Safely wraps long file names without breaking layouts */
