@@ -138,19 +138,17 @@ body,
 }
 
 #sidebar-panel {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative; /* Changed from absolute */
     width: 750px; 
     height: 100%;
     background-color: #D23929;
     color: #FFFFFF;
-    z-index: 1000;
     box-shadow: 2px 0 10px rgba(0,0,0,0.15);
     display: block;
     overflow-y: auto;
     box-sizing: border-box;
     padding: 20px;
+    flex-shrink: 0; /* Prevents the sidebar from shrinking below 750px */
 }
 
 #close-sidebar {
