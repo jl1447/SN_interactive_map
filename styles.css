@@ -163,8 +163,8 @@ body,
     
     /* Adds the translucent Squamish Red tint over your WebP asset */
     background-image: linear-gradient(
-        rgba(210, 57, 41, 0.88), 
-        rgba(210, 57, 41, 0.88)
+        rgba(210, 57, 41, 0.50), 
+        rgba(210, 57, 41, 0.50)
       ), 
       url("./images/log_sign.webp"); 
     
