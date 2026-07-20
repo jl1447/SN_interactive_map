@@ -16,11 +16,9 @@ export async function loadSasquatch(map) {
     const layer = L.geoJSON(data, {
 
         pointToLayer(feature, latlng) {
-
             return L.marker(latlng, {
                 icon: sasquatchIcon
             });
-
         },
 
         onEachFeature(feature, layer) {
@@ -36,6 +34,9 @@ export async function loadSasquatch(map) {
             const audioFile =
                 feature.properties?.AUDIO;
 
+            const imageFile =
+                feature.properties?.IMAGE;
+
             let popupContent = `
                 <div class="village-title">
                     ${name}
@@ -46,6 +47,14 @@ export async function loadSasquatch(map) {
                 </div>
             `;
 
+            // Append image if present
+            if (imageFile) {
+                popupContent += `
+                    <img src="./images/${imageFile}" alt="${name}" class="popup-image" />
+                `;
+            }
+
+            // Append audio button if present
             if (audioFile) {
 
                 const audioId =
@@ -58,6 +67,7 @@ export async function loadSasquatch(map) {
                         class="audio-play-btn"
                         onclick="
                             const audio = document.getElementById('${audioId}');
+
                             if (audio.paused) {
                                 audio.play();
                                 this.innerText='⏸ Pause';
@@ -73,7 +83,7 @@ export async function loadSasquatch(map) {
                     <audio
                         id="${audioId}"
                         preload="none"
-                        src="./audio/${audioFile}" 
+                        src="./audio/${audioFile}"
                     ></audio>
                 `;
             }
