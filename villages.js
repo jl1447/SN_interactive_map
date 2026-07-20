@@ -79,10 +79,19 @@ export async function loadVillages(map) {
             }
 
             if (images && images.trim() !== "") {
-                sidebarHTML += `<div class="image-gallery" style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px;">`;
+                sidebarHTML += `<div class="image-gallery">`;
                 images.split(",").forEach(imageFile => {
-                    if (imageFile.trim() !== "") {
-                        sidebarHTML += `<img src="images/${imageFile.trim()}" alt="${villageName}" style="max-width: 100%; height: auto; border-radius: 4px;" />`;
+                    const trimmedFile = imageFile.trim();
+                    if (trimmedFile !== "") {
+                        // Extracts "Harriet Harry BBQ on Staamus" from "Harriet Harry BBQ on Staamus.jpg"
+                        const displayName = trimmedFile.split('.').slice(0, -1).join('.'); 
+                        
+                        sidebarHTML += `
+                            <div class="gallery-item">
+                                <img src="images/${trimmedFile}" alt="${villageName}" />
+                                <span class="image-caption">${displayName}</span>
+                            </div>
+                        `;
                     }
                 });
                 sidebarHTML += `</div>`;
