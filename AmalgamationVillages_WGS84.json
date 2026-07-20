@@ -17,7 +17,7 @@
         "VILNAME_S": "P’uýám\u0301",
         "AUDIO": "./audio/Puyam.m4a",
         "IMAGES": "",
-        "VIDEO": "",
+        "VIDEO": "Puyam.mp4",
         "GlobalID": "{2C9FADF1-6EC6-4BEB-803E-EFD2032201DF}"
       }
     },
@@ -37,7 +37,7 @@
         "VILNAME_S": "Ch’éḵch’eḵts",
         "AUDIO": "./audio/Chekchekts.m4a",
         "IMAGES": "",
-        "VIDEO": "",
+        "VIDEO": "Chekchekts.mp4",
         "GlobalID": "{839746CB-7B42-43E1-B5FF-68E6FA0924CA}"
       }
     },
@@ -57,7 +57,7 @@
         "VILNAME_S": "Skáwshen",
         "AUDIO": "./audio/Skawshen.m4a",
         "IMAGES": "",
-        "VIDEO": "",
+        "VIDEO": "Skawshen.mp4",
         "GlobalID": "{4C4949D9-066A-4029-88FE-40298AEE658F}"
       }
     },
@@ -77,7 +77,7 @@
         "VILNAME_S": "Yekw’ts",
         "AUDIO": "./audio/Yekwts.m4a",
         "IMAGES": "",
-        "VIDEO": "",
+        "VIDEO": "Yekwts.mp4",
         "GlobalID": "{A4CE2A81-7F32-4BF0-8A01-5BF35E6E5DCB}"
       }
     },
@@ -97,7 +97,7 @@
         "VILNAME_S": "Ch’iyáḵmesh",
         "AUDIO": "./audio/Chiyakmesh.m4a",
         "IMAGES": "",
-        "VIDEO": "",
+        "VIDEO": "Chiyakmesh.mp4",
         "GlobalID": "{641A4509-4274-4D4C-A53A-9203A234D4FD}"
       }
     },
@@ -117,7 +117,7 @@
         "VILNAME_S": "Wíweḵ’em",
         "AUDIO": "./audio/Wiwkem.m4a",
         "IMAGES": "",
-        "VIDEO": "",
+        "VIDEO": "Wiwkem.mp4",
         "GlobalID": "{7DD3513C-D1E6-4A3C-BDCE-097768415251}"
       }
     },
@@ -137,7 +137,7 @@
         "VILNAME_S": "Íkwikws",
         "AUDIO": "./audio/Ikwikws.m4a",
         "IMAGES": "",
-        "VIDEO": "",
+        "VIDEO": "Ikwikws.mp4",
         "GlobalID": "{4E748BE9-8985-4A74-ABEB-5C698A799C29}"
       }
     },
@@ -177,7 +177,7 @@
         "VILNAME_S": "Kaw\u0301tín",
         "AUDIO": "./audio/Kawtin.m4a",
         "IMAGES": "",
-        "VIDEO": "",
+        "VIDEO": "Kawtin.mp4",
         "GlobalID": "{F6D2168C-99B9-40ED-B88E-22D7064B838A}"
       }
     },
@@ -197,7 +197,7 @@
         "VILNAME_S": "Yekw’ápsem",
         "AUDIO": "./audio/Yekwapsem.m4a",
         "IMAGES": "",
-        "VIDEO": "",
+        "VIDEO": "Yekwapsem.mp4",
         "GlobalID": "{C3051B81-4293-4862-BBEC-25F3C1AA03EE}"
       }
     },
@@ -217,7 +217,7 @@
         "VILNAME_S": "St’á7mes",
         "AUDIO": "./audio/Sta7mes.m4a",
         "IMAGES": "Harriet Harry BBQ on Staamus.jpg, Moses Billy working on canoe Staamus Reserve.jpg, Ronald Billy Staamus Reserve.jpg",
-        "VIDEO": "",
+        "VIDEO": "Sta7mes.mp4",
         "GlobalID": "{BB81EA33-66E9-4A1D-9506-6BDD869C2F0B}"
       }
     },
@@ -237,7 +237,7 @@
         "VILNAME_S": "Ḵw’émḵw’em",
         "AUDIO": "./audio/Kwemkwem.m4a",
         "IMAGES": "",
-        "VIDEO": "",
+        "VIDEO": "Kwemkwem.mp4",
         "GlobalID": "{234A72E6-2CB8-42B7-B952-5886B50649D6}"
       }
     },
@@ -277,7 +277,7 @@
         "VILNAME_S": "Ch’ḵw’élhp",
         "AUDIO": "./audio/Chkwelhp.m4a",
         "IMAGES": "Chana Taiwaa Howe Sound Chekwelp Reserve1937.jpg",
-        "VIDEO": "",
+        "VIDEO": "Schenk_Chekwelhp.mp4",
         "GlobalID": "{5291617F-00F5-4102-A9F6-C61702976314}"
       }
     },
@@ -297,7 +297,7 @@
         "VILNAME_S": "Xwmélch’sten",
         "AUDIO": "./audio/Xwmelchsten.m4a",
         "IMAGES": "Graveyard in Capilano xwemelchstn 1900.jpg",
-        "VIDEO": "",
+        "VIDEO": "Xwmelchsten.mp4",
         "GlobalID": "{A358413D-CA67-4958-8E64-9FB434046507}"
       }
     },
@@ -317,7 +317,7 @@
         "VILNAME_S": "Eslha7áń",
         "AUDIO": "./audio/Eslha7an.m4a",
         "IMAGES": "Missiion Village 1908.jpg, The Mission 1886 or 1887.jpg",
-        "VIDEO": "",
+        "VIDEO": "Eslha7an.mp4",
         "GlobalID": "{86C90D91-C664-4835-A79A-1BB2A0E43716}"
       }
     },
@@ -337,7 +337,7 @@
         "VILNAME_S": "Sḵemín",
         "AUDIO": "./audio/",
         "IMAGES": "",
-        "VIDEO": "",
+        "VIDEO": "Skwmin.mp4",
         "GlobalID": "{72A10AAC-0C73-4D14-BE72-4224D6241C27}"
       }
     },
@@ -377,7 +377,7 @@
         "VILNAME_S": "Ch’ích’elxwi7ḵw",
         "AUDIO": "./audio/Chichelxwi7kw.m4a",
         "IMAGES": "House of Chief Jim Harry Seymour Creek Oct 9 1923.jpg, Seymour Creek 1886.jpg",
-        "VIDEO": "",
+        "VIDEO": "Chichelxwi.mp4",
         "GlobalID": "{04D729D2-8B23-46DE-A40C-C83C8A6D7081}"
       }
     },
@@ -397,7 +397,7 @@
         "VILNAME_S": "Puḵwayúsm",
         "AUDIO": "./audio/Pukwayusem.m4a",
         "IMAGES": "",
-        "VIDEO": "",
+        "VIDEO": "Pukwayusm.mp4",
         "GlobalID": "{2BD060AA-3046-448C-B8E9-9803DC1125D3}"
       }
     },
@@ -417,7 +417,7 @@
         "VILNAME_S": "Sx\u0331aaltxw",
         "AUDIO": "./audio/Sxaaltxw.m4a",
         "IMAGES": "",
-        "VIDEO": "",
+        "VIDEO": "Sxaaltxw.mp4",
         "GlobalID": "{8F7C6A26-41A3-4FA0-8F4A-36E605F9E2B5}"
       }
     }
