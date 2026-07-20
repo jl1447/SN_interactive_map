@@ -158,7 +158,7 @@ body,
 
 #sidebar-panel {
     position: relative; 
-    width: 33%;          /* Changed to take up exactly 1/3 of the screen width */
+    width: 40%;
     height: 100%;
     background-color: #D23929;
     color: #FFFFFF;
