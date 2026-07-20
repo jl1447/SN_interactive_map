@@ -128,8 +128,6 @@ body,
     margin-top: 0;
 }
 
-/* ... Keep everything above .village-title exactly the same ... */
-
 .village-title {
     text-align: center;
     color: #FFFFFF; /* CHANGED to white so it's readable on the red background */
@@ -143,7 +141,7 @@ body,
     position: absolute;
     top: 0;
     left: 0;
-    width: 460px; /* Panel width is 460px */
+    width: 750px; 
     height: 100%;
     background-color: #D23929;
     color: #FFFFFF;
