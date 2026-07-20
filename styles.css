@@ -41,14 +41,18 @@ body,
     display: flex;
     justify-content: center;
     gap: 8px;
-    overflow-x: auto;
-    margin-top: 8px;
+    flex-wrap: wrap;       /* Allows multiple images to grid down nicely */
+    width: 95%;            /* Matches the width of the video */
+    max-width: 670px;      /* Matches the maximum video ceiling */
+    margin: 15px auto 0 auto; /* Centers the whole gallery block inside the panel */
 }
 
 .image-gallery img {
-    height: 150px;
-    width: auto;
-    border-radius: 4px;
+    width: 100%;           /* Instructs single images to fill the full container block */
+    max-width: 100%;       /* Ensures it won't overflow the container */
+    height: auto;          /* Maintains the image's original aspect ratio */
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Matches the sleek video shadow */
 }
 
 .leaflet-container {
