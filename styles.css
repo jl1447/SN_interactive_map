@@ -106,26 +106,24 @@ body,
     margin-top: 8px;
     border-radius: 4px;
 }
-
 .popup-scroll-container {
-    width: 340px;
-    height: 260px;
-
+    width: 100%;         /* Let it expand to fill the full 750px sidebar width */
+    height: calc(100vh - 120px); /* Makes the inner container vertically scrollable dynamically */
     overflow-y: auto;
     overflow-x: hidden;
-
     scrollbar-gutter: stable;
     text-align: center;
-    padding-right: 8px;
+    margin-top: 20px;
 }
 
 .popup-video {
-    display: block;      /* Ensures the element behaves as a block to allow auto margins to work */
-    width: 95%;          /* Takes up almost the full width */
-    max-width: 680px;    /* Prevents overflowing the 750px panel minus its padding */
-    height: auto;        /* Maintains correct aspect ratio */
-    margin: 15px auto 0 auto; /* Smoothly centers horizontally (auto left/right) and adds a top gap */
-    border-radius: 4px;
+    display: block;
+    width: 95%;          /* Takes up almost the full width of the expanded container */
+    max-width: 670px;    /* Caps it neatly within the 750px sidebar (accounting for paddings) */
+    height: auto;        /* Preserves standard 16:9 widescreen proportions */
+    margin: 15px auto 0 auto; /* Horizontally centers the video block */
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Optional: makes the video pop on the red background */
 }
 
 .village-title {
