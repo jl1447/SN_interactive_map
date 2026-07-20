@@ -83,13 +83,12 @@ export async function loadVillages(map) {
                 images.split(",").forEach(imageFile => {
                     const trimmedFile = imageFile.trim();
                     if (trimmedFile !== "") {
-                        // Extracts "Harriet Harry BBQ on Staamus" from "Harriet Harry BBQ on Staamus.jpg"
                         const displayName = trimmedFile.split('.').slice(0, -1).join('.'); 
                         
                         sidebarHTML += `
                             <div class="gallery-item">
                                 <img src="images/${trimmedFile}" alt="${villageName}" />
-                                <span class="image-caption">${displayName}</span>
+                                <span class="image-caption">“${displayName}”</span>
                             </div>
                         `;
                     }
