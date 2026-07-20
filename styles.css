@@ -158,9 +158,21 @@ body,
 
 #sidebar-panel {
     position: relative; 
-    width: 40%;
+    width: 33%;          
     height: 100%;
-    background-color: #D23929;
+    
+    /* Adds the translucent Squamish Red tint over your WebP asset */
+    background-image: linear-gradient(
+        rgba(210, 57, 41, 0.88), 
+        rgba(210, 57, 41, 0.88)
+      ), 
+      url("./images/log_sign.webp"); /* Replace with your actual webp file name */
+    
+    /* Configures the background scaling rules */
+    background-size: cover;        /* Scales the webp asset to perfectly cover the area */
+    background-position: center;   /* Keeps the focus centered */
+    background-repeat: no-repeat;
+    
     color: #FFFFFF;
     box-shadow: 2px 0 10px rgba(0,0,0,0.15);
     display: block;
