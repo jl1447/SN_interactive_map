@@ -75,10 +75,10 @@ export async function loadVillages(map) {
                 `;
             }
 
-            if (audioFile && audioFile.trim() !== "") {
+           if (audioFile && audioFile.trim() !== "") {
                 sidebarHTML += `
                     <audio id="${audioId}" preload="none">
-                        <source src="${audioFile.trim()}" type="audio/mpeg">
+                        <source src="audio/${audioFile.trim()}" type="audio/mpeg">
                     </audio>
                 `;
             }
