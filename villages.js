@@ -3,8 +3,13 @@ window.clearSidebar = function() {
     const content = document.getElementById("sidebar-content");
     if (content) {
         content.innerHTML = `
-            <div style="color: rgba(255, 255, 255, 0.8); text-align: center; margin-top: 40px; font-style: italic;">
-                Select a village on the map to view details.
+            <div style="text-align: center; margin-top: 40px; padding: 0 10px;">
+                <h2 style="font-family: Tahoma, sans-serif; font-weight: bold; color: #FFFFFF; font-size: 1.4em; margin-bottom: 16px; line-height: 1.3;">
+                    Welcome to the Squamish Nation Interactive Amalgamation Village Map
+                </h2>
+                <p style="color: rgba(255, 255, 255, 0.8); font-style: italic; margin: 0;">
+                    Select a village on the map to view details.
+                </p>
             </div>
         `;
     }
