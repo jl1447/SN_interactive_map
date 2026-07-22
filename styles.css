@@ -182,7 +182,7 @@ body,
     overflow: hidden; /* Clips decorative overlays to sidebar bounds */
 }
 
-/* Middle Board Overlay (3 boards stacked vertically) */
+/* Middle Board Overlay (Repeats cleanly from top to bottom) */
 #sidebar-panel::before {
     content: "";
     position: absolute;
@@ -191,30 +191,15 @@ body,
     left: 0;
     right: 0;
     
-    /* 1. Stack 3 identical background layers */
-    background-image: 
-        url("./images/middle_board.webp"),
-        url("./images/middle_board.webp"),
-        url("./images/middle_board.webp");
-
-    /* 2. Position them at Top, Center, and Bottom */
-    background-position: 
-        center top,
-        center center,
-        center bottom;
-
-    /* 3. Do not repeat */
-    background-repeat: 
-        no-repeat,
-        no-repeat,
-        no-repeat;
-
-    /* 4. Set each board's height to roughly 1/3 (33.33%) of the panel */
-    background-size: 
-        100% 50%,
-        100% 50%,
-        100% 50%;
-
+    background-image: url("./images/middle_board.webp");
+    
+    /* 1. Sets horizontal width to fit, and height auto-calculated */
+    background-size: 100% auto; 
+    
+    /* 2. Tiles vertically, auto-adjusting scale so tiles fit cleanly */
+    background-repeat: space round; 
+    
+    background-position: center top;
     pointer-events: none;
     z-index: 1;
 }
