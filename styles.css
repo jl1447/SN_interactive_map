@@ -182,23 +182,18 @@ body,
     overflow: hidden; /* Clips decorative overlays to sidebar bounds */
 }
 
-/* Middle Board Overlay */
+/* Middle Board Overlay (Tiles seamlessly from top to bottom) */
 #sidebar-panel::before {
     content: "";
     position: absolute;
-    top: 20%;
-    bottom: 20%;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     background-image: url("./images/middle_board.webp");
     background-repeat: repeat-y;
-    
-    /* 1. Scale background to fill width without forcing an aspect-ratio height lock */
-    background-size: 100% contain; 
-    
-    /* 2. Anchor the tile start position */
-    background-position: center top; 
-    
+    background-size: 100% auto;
+    background-position: center top;
     pointer-events: none;
     z-index: 1;
 }
