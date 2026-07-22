@@ -223,7 +223,7 @@ body,
     pointer-events: auto;
     
     /* 1. Constrain width & center inside the log frame */
-    width: calc(100% - 120px); /* Leaves 60px clearance on both left and right */
+    width: calc(100% - 160px); /* Leaves 60px clearance on both left and right */
     margin: 0 auto;            /* Centers the scroll area between the log borders */
     
     flex: 1;
