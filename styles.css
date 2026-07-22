@@ -173,28 +173,33 @@ body,
     width: 42%; 
     height: 100%;
     
-    /* Solid base background color */
+    /* Solid base background color behind everything */
     background-color: #D23929;
     
     /* 
-      Layer 1 (Top): Tree on the left edge
-      Layer 2 (Bottom): Tree on the right edge
+      Layer 1 (Top): Left log
+      Layer 2 (Middle): Right log
+      Layer 3 (Bottom): Center repeating board
     */
     background-image: 
         url("./images/longer_log_design_one_L.webp"), 
-        url("./images/longer_log_design_one_R.webp"); 
+        url("./images/longer_log_design_one_R.webp"),
+        url("./images/middle_board.webp"); 
     
     background-position: 
-        left center,   /* Left tree */
-        right center;  /* Right tree */
+        left center,   /* Left log */
+        right center,  /* Right log */
+        center 30px;   /* Center board: centered horizontally, inset 30px from top */
         
     background-repeat: 
         no-repeat, 
-        no-repeat;
+        no-repeat,
+        repeat-y;      /* Board repeats vertically down the panel */
         
     background-size: 
-        auto 100%,     /* Spans 100% of the panel height while keeping image ratio */
-        auto 100%;
+        auto 100%,     /* Left log height */
+        auto 100%,     /* Right log height */
+        100% auto;     /* Board spans full width to tuck underneath the log graphics */
     
     color: #FFFFFF;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
@@ -202,7 +207,7 @@ body,
     overflow-y: auto;
     box-sizing: border-box;
     
-    /* Adjust padding to push content inside the tree frame */
+    /* Inset padding so text content renders over the board, clear of the logs */
     padding: 20px 60px; 
 }
 
