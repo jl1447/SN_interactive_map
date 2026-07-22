@@ -4,10 +4,23 @@ window.clearSidebar = function() {
     if (content) {
         content.innerHTML = `
             <div style="text-align: center; margin-top: 40px; padding: 0 10px;">
-                <h2 style="font-family: Tahoma, sans-serif; font-weight: bold; color: #FFFFFF; font-size: 1.4em; margin-bottom: 16px; line-height: 1.3;">
+                <h2 style="
+                    font-family: Tahoma, sans-serif; 
+                    font-weight: bold; 
+                    color: #FFFFFF; 
+                    font-size: 1.4em; 
+                    margin-bottom: 16px; 
+                    line-height: 1.3;
+                    text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
+                ">
                     Sḵwx̱wú7mesh Úxwumixw Interactive Amalgamation Village Map
                 </h2>
-                <p style="color: rgba(255, 255, 255, 0.8); font-style: italic; margin: 0;">
+                <p style="
+                    color: rgba(255, 255, 255, 0.8); 
+                    font-style: italic; 
+                    margin: 0;
+                    text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
+                ">
                     Select a village on the map to learn more.
                 </p>
             </div>
