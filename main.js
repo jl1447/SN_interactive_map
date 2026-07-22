@@ -7,16 +7,22 @@ import { addLogo } from "./logo.js";
 async function initializeMap() {
     let map;
 
-    // 1. Core Map Setup (Must succeed)
+    // 1. Core Map Setup
     try {
         map = createMap();
         addLogo(map);
     } catch (error) {
         console.error("Critical failure: Could not initialize base map structure.", error);
-        return; // Stop if the actual map initialization fails
+        return;
     }
 
-    // 2. Data Layers (Isolated so one failure won't crash the whole app)
+    // Prevent Leaflet from hijacking scroll events on the sidebar panel
+    const sidebar = document.getElementById("sidebar-panel");
+    if (sidebar) {
+        L.DomEvent.disableScrollPropagation(sidebar);
+    }
+
+    // 2. Data Layers
     try {
         await loadBoundary(map);
         console.log("Boundary layer loaded.");
@@ -39,7 +45,6 @@ async function initializeMap() {
     }
 
     // 3. Recalculate and Recenter Map Bounds
-    // This forces Leaflet to recognize the sidebar's layout footprint and perfectly center the data layers
     if (map) {
         map.invalidateSize();
     }
