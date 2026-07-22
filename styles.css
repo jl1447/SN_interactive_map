@@ -192,8 +192,13 @@ body,
     right: 0;
     background-image: url("./images/middle_board.webp");
     background-repeat: repeat-y;
-    background-size: 100% auto;
-    background-position: center top;
+    
+    /* 1. Scale background to fill width without forcing an aspect-ratio height lock */
+    background-size: 100% contain; 
+    
+    /* 2. Anchor the tile start position */
+    background-position: center top; 
+    
     pointer-events: none;
     z-index: 1;
 }
