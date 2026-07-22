@@ -186,8 +186,8 @@ body,
 #sidebar-panel::before {
     content: "";
     position: absolute;
-    top: 15%;            /* Offset 15% from the top */
-    bottom: 15%;         /* Offset 15% from the bottom */
+    top: 20%;            /* Offset from the top */
+    bottom: 10%;         /* Offset from the bottom */
     left: 0;
     right: 0;
     
@@ -224,16 +224,18 @@ body,
 
 /* Inner Scroll Area */
 #sidebar-content {
-    position: relative;
+    position: absolute;
+    top: 0;                /* Starts at the top so header content isn't cut off */
+    bottom: 10%;           /* Ends exactly where the middle board ends */
+    left: 0;
+    right: 0;
     z-index: 3;
     pointer-events: auto;
     
     /* 1. Constrain width & center inside the log frame */
-    width: calc(100% - 160px); /* Leaves 60px clearance on both left and right */
-    margin: 0 auto;            /* Centers the scroll area between the log borders */
+    width: calc(100% - 160px); /* Leaves clearance for left and right log borders */
+    margin: 0 auto;            /* Centers the scroll area */
     
-    flex: 1;
-    min-height: 0;
     overflow-y: auto;
     overflow-x: hidden;
     
@@ -241,7 +243,7 @@ body,
     padding: 20px 10px;        
     box-sizing: border-box;
     text-align: center;
-    scrollbar-gutter: stable;  /* Prevents content from jumping when scrollbar appears */
+    scrollbar-gutter: stable;  /* Prevents jumping when scrollbar appears */
 }
 
 /* Close Button */
