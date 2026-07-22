@@ -172,45 +172,54 @@ body,
     position: relative; 
     width: 42%; 
     height: 100%;
-    
-    /* Solid base background color behind everything */
     background-color: #D23929;
-    
-    /* 
-      Layer 1 (Top): Left log
-      Layer 2 (Middle): Right log
-      Layer 3 (Bottom): Center repeating board
-    */
-    background-image: 
-        url("./images/longer_log_design_one_L.webp"), 
-        url("./images/longer_log_design_one_R.webp"),
-        url("./images/middle_board.webp"); 
-    
-    background-position: 
-        left center,   /* Left log */
-        right center,  /* Right log */
-        center 30px;   /* Center board: centered horizontally, inset 30px from top */
-        
-    background-repeat: 
-        no-repeat, 
-        no-repeat,
-        repeat-y;      /* Board repeats vertically down the panel */
-        
-    background-size: 
-        auto 100%,     /* Left log height */
-        auto 100%,     /* Right log height */
-        100% auto;     /* Board spans full width to tuck underneath the log graphics */
-    
     color: #FFFFFF;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
     display: block;
     overflow-y: auto;
     box-sizing: border-box;
-    
-    /* Inset padding so text content renders over the board, clear of the logs */
     padding: 20px 60px; 
 }
 
+/* 1. Repeating Middle Board (Leaves 20% gap top and bottom) */
+#sidebar-panel::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+    left: 0;
+    right: 0;
+    background-image: url("./images/middle_board.webp");
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    background-position: center top;
+    pointer-events: none; /* Allows clicks to pass through to content */
+    z-index: 1;
+}
+
+/* 2. Side Log Graphics (Layered over the edges of the board) */
+#sidebar-panel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: 
+        url("./images/longer_log_design_one_L.webp"), 
+        url("./images/longer_log_design_one_R.webp");
+    background-position: left center, right center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto 100%, auto 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* 3. Ensures your text, buttons, and content sit above the background graphics */
+#sidebar-panel > * {
+    position: relative;
+    z-index: 3;
+}
 #close-sidebar {
     position: absolute;
     top: 15px;
