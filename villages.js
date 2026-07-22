@@ -19,9 +19,13 @@ window.clearSidebar = function() {
                     color: rgba(255, 255, 255, 0.8); 
                     font-style: italic; 
                     margin: 0;
-                    text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
+                    /*text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
                 ">
-                    Select a village on the map to learn more.
+                    Welcome to the very first peek at the Squamish Nation Interactive Map.  
+ 
+                    This is the beginning of an ongoing  journey to present our Land, Culture and History in an interactive digital display that our People can use and enjoy.
+ 
+                    We really welcome ideas and suggestions, so please feel free to scan the QR Code and share your thoughts. 
                 </p>
             </div>
         `;
