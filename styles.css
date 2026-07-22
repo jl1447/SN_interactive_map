@@ -182,12 +182,12 @@ body,
     overflow: hidden; /* Clips decorative overlays to sidebar bounds */
 }
 
-/* Middle Board Overlay (Repeats cleanly from top to bottom) */
+/* Middle Board Overlay (Restricted to middle section) */
 #sidebar-panel::before {
     content: "";
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 15%;            /* Offset 15% from the top */
+    bottom: 15%;         /* Offset 15% from the bottom */
     left: 0;
     right: 0;
     
@@ -196,7 +196,7 @@ body,
     /* 1. Sets horizontal width to fit, and height auto-calculated */
     background-size: 100% auto; 
     
-    /* 2. Tiles vertically, auto-adjusting scale so tiles fit cleanly */
+    /* 2. Tiles vertically within the 15%-85% container bounds */
     background-repeat: space round; 
     
     background-position: center top;
