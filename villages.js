@@ -21,10 +21,10 @@ window.clearSidebar = function() {
                     margin: 0;
                     /*text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
                 ">
-                    Welcome to the very first peek at the Squamish Nation Interactive Map.  
- 
-                    This is the beginning of an ongoing  journey to present our Land, Culture and History in an interactive digital display that our People can use and enjoy.
- 
+                    Welcome to the very first peek at the Squamish Nation Interactive Map.<br>
+                    <br>
+                    This is the beginning of an ongoing  journey to present our Land, Culture and History in an interactive digital display that our People can use and enjoy. <br>
+                    <br>
                     We really welcome ideas and suggestions, so please feel free to scan the QR Code and share your thoughts. 
                 </p>
             </div>
