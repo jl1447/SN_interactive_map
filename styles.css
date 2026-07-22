@@ -191,7 +191,7 @@ body,
     left: 0;
     right: 0;
     
-    background-image: url("./images/middle_board_cropped.png");
+    background-image: url("./images/middle_board_cropped_no_edge.png");
     
     /* 1. Sets horizontal width to fit, and height auto-calculated */
     background-size: 100% auto; 
