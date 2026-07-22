@@ -172,7 +172,7 @@ body,
         rgba(210, 57, 41, 0.50), 
         rgba(210, 57, 41, 0.50)
       ), 
-      url("./images/log_sign.webp"); 
+      url("./images/erasebg-transformed.webp"); 
     
     /* Configures the background scaling rules */
     background-size: contain;        /* Scales the webp asset to perfectly cover the area */
