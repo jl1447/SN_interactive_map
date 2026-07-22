@@ -167,21 +167,37 @@ body,
     width: 33%; 
     height: 100%;
     
-    /* Solid base color */
+    /* Solid base background color */
     background-color: #D23929;
     
-    /* Background Image & Overlay Settings */
-    background-image: url("./images/erasebg-transformed.webp"); 
-    background-size: contain;         /* Scales the image so it doesn't clip */
-    background-position: center;      /* Centers the image within the panel */
-    background-repeat: no-repeat;     /* Prevents tiling */
+    /* 
+      Layer 1 (Top): Tree on the left edge
+      Layer 2 (Bottom): Tree on the right edge
+    */
+    background-image: 
+        url("./images/longer_log_design_one_L.webp"), 
+        url("./images/longer_log_design_one_R.webp"); 
+    
+    background-position: 
+        left center,   /* Left tree */
+        right center;  /* Right tree */
+        
+    background-repeat: 
+        no-repeat, 
+        no-repeat;
+        
+    background-size: 
+        auto 100%,     /* Spans 100% of the panel height while keeping image ratio */
+        auto 100%;
     
     color: #FFFFFF;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
     display: block;
     overflow-y: auto;
     box-sizing: border-box;
-    padding: 20px;
+    
+    /* Adjust padding to push content inside the tree frame */
+    padding: 20px 60px; 
 }
 
 #close-sidebar {
