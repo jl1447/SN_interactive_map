@@ -133,14 +133,20 @@ body,
     margin-top: 8px;
     border-radius: 4px;
 }
+
 .popup-scroll-container {
-    width: 100%;         /* Let it expand to fill the full 750px sidebar width */
-    height: calc(100vh - 120px); /* Makes the inner container vertically scrollable dynamically */
+    /* 1. Reserve clearance for the trees on each side (e.g., 60px left + 60px right = 120px total) */
+    width: calc(100% - 120px); 
+    max-width: 100%;
+    
+    /* 2. Center the container between the trees */
+    margin: 20px auto 0 auto; 
+    
+    height: calc(100vh - 120px);
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-gutter: stable;
     text-align: center;
-    margin-top: 20px;
 }
 
 .popup-video {
