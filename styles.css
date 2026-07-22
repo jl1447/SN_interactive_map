@@ -18,7 +18,434 @@
 .audio-play-btn:hover {
     opacity: 0.9;
 }
+ .audio-play-btn {
 
+    background-color: #D23929;
+
+    color: #FFFFFF;
+
+    border: none;
+
+    border-radius: 4px;
+
+    padding: 8px 12px;
+
+    font-family: Tahoma, sans-serif;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    width: 100%;
+
+    margin-top: 0;
+
+}
+
+
+.audio-play-btn:active {
+
+    transform: scale(0.98);
+
+}
+
+
+.audio-play-btn:hover {
+
+    opacity: 0.9;
+
+}
+
+
+.clickable-title {
+
+    cursor: pointer;
+
+}
+
+
+.clickable-title:hover {
+
+    opacity: 0.9;
+
+    text-decoration: underline;
+
+}
+
+
+html,
+
+body,
+
+#map {
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+.image-gallery {
+
+    display: flex;
+
+    flex-direction: column; /* Stacks the images and their text cleanly down the sidebar */
+
+    align-items: center;
+
+    gap: 20px;              /* Adds vertical space between separate image blocks */
+
+    width: 95%;            
+
+    max-width: 670px;      
+
+    margin: 15px auto 0 auto; 
+
+}
+
+
+.gallery-item {
+
+    width: 100%;            /* Forces the wrapper item to match the video span width */
+
+    text-align: center;
+
+}
+
+
+.image-gallery img {
+
+    width: 100%;           
+
+    max-width: 100%;       
+
+    height: auto;          
+
+    border-radius: 6px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+
+    display: block;         /* Removes inline bottom whitespace quirks */
+
+}
+
+
+.image-caption {
+
+    display: block;
+
+    font-family: Tahoma, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: normal;
+
+    font-style: italic;
+
+    color: rgba(255, 255, 255, 0.9); /* High contrast readable off-white text */
+
+    margin-top: 8px;                 /* Clean spacing directly under the picture frame */
+
+    word-wrap: break-word;          /* Safely wraps long file names without breaking layouts */
+
+
+    text-shadow: 
+
+        -1px -1px 2px #000000,
+
+         1px -1px 2px #000000,
+
+        -1px  1px 2px #000000,
+
+         1px  1px 2px #000000;
+
+}
+
+
+.leaflet-container {
+
+    background: white;
+
+}
+
+
+.leaflet-popup-close-button {
+
+    color: #000000 !important;
+
+}
+
+
+.leaflet-popup-close-button:hover {
+
+    color: #000000 !important;
+
+}
+
+
+.leaflet-popup-content {
+
+    color: #ffffff;
+
+    font-family: Tahoma, sans-serif;
+
+    font-weight: bolder;
+
+    text-align: center;
+
+}
+
+
+.leaflet-popup-content strong {
+
+    display: block;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    font-size: 16px;
+
+    margin: 12px 0 8px 0;
+
+}
+
+
+.leaflet-popup-content-wrapper {
+
+    background: #D23929;
+
+    color: #FFFFFF;
+
+    font-family: Tahoma, sans-serif;
+
+}
+
+
+.leaflet-popup audio {
+
+    width: 100%;
+
+    margin-top: 8px;
+
+}
+
+
+.leaflet-popup-tip {
+
+    background: #D23929;
+
+}
+
+
+.logo-control img {
+
+    width: 180px;
+
+    opacity: 0.8;
+
+    pointer-events: none;
+
+}
+
+
+.popup-image {
+
+    width: 220px;
+
+    max-width: 100%;
+
+    display: block;
+
+    margin-top: 8px;
+
+    border-radius: 4px;
+
+}
+
+
+.popup-scroll-container {
+
+    /* 1. Reserve clearance for the trees on each side (e.g., 60px left + 60px right = 120px total) */
+
+    width: calc(100% - 120px); 
+
+    max-width: 100%;
+
+    
+
+    /* 2. Center the container between the trees */
+
+    margin: 20px auto 0 auto; 
+
+    
+
+    height: calc(100vh - 120px);
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    scrollbar-gutter: stable;
+
+    text-align: center;
+
+}
+
+
+.popup-video {
+
+    display: block;
+
+    width: 95%;          /* Takes up almost the full width of the expanded container */
+
+    max-width: 670px;    /* Caps it neatly within the 750px sidebar (accounting for paddings) */
+
+    height: auto;        /* Preserves standard 16:9 widescreen proportions */
+
+    margin: 15px auto 0 auto; /* Horizontally centers the video block */
+
+    border-radius: 6px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Optional: makes the video pop on the red background */
+
+}
+
+
+.village-title {
+
+    text-align: center;
+
+    color: #FFFFFF; 
+
+    font-family: Tahoma, sans-serif;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    margin-bottom: 2px;
+
+}
+
+
+#sidebar-panel {
+
+    position: relative; 
+
+    width: 42%; 
+
+    height: 100%;
+
+    
+
+    /* Solid base background color */
+
+    background-color: #D23929;
+
+    
+
+    /* 
+
+      Layer 1 (Top): Tree on the left edge
+
+      Layer 2 (Bottom): Tree on the right edge
+
+    */
+
+    background-image: 
+
+        url("./images/longer_log_design_one_L.webp"), 
+
+        url("./images/longer_log_design_one_R.webp"); 
+
+    
+
+    background-position: 
+
+        left center,   /* Left tree */
+
+        right center;  /* Right tree */
+
+        
+
+    background-repeat: 
+
+        no-repeat, 
+
+        no-repeat;
+
+        
+
+    background-size: 
+
+        auto 100%,     /* Spans 100% of the panel height while keeping image ratio */
+
+        auto 100%;
+
+    
+
+    color: #FFFFFF;
+
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+
+    display: block;
+
+    overflow-y: auto;
+
+    box-sizing: border-box;
+
+    
+
+    /* Adjust padding to push content inside the tree frame */
+
+    padding: 20px 60px; 
+
+}
+
+
+#close-sidebar {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    background: none;
+
+    border: none;
+
+    color: #FFFFFF; /* Ensures the close 'X' stays white */
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    opacity: 0.7;
+
+    transition: opacity 0.2s;
+
+}
+
+
+#close-sidebar:hover {
+
+    opacity: 1;
+
+}
+
+
+.popup-scroll-container {
+
+    margin-top: 20px;
+
+} 
 .clickable-title {
     cursor: pointer;
 }
