@@ -1,11 +1,11 @@
-// Global helper function to clear sidebar content (instead of hiding the panel)
+// Global helper function to clear sidebar content
 window.clearSidebar = function() {
     const content = document.getElementById("sidebar-content");
     if (content) {
         content.innerHTML = `
             <div style="text-align: center; margin-top: 40px; padding: 0 10px;">
                 <h2 style="font-family: Tahoma, sans-serif; font-weight: bold; color: #FFFFFF; font-size: 1.4em; margin-bottom: 16px; line-height: 1.3;">
-                    Sḵwx̱wú7mesh Úxwumixw Interactive Amalgamation Village Map
+                    Sḵwx̱wú7mesh Úxwumixw Interactive Amalgamation Village Map
                 </h2>
                 <p style="color: rgba(255, 255, 255, 0.8); font-style: italic; margin: 0;">
                     Select a village on the map to learn more.
@@ -50,7 +50,6 @@ export async function loadVillages(map) {
             const videoFile = feature.properties?.VIDEO;
             const audioId = `audio-${feature.id}`;
 
-            // Line breaks removed inside the inline onclick string to avoid syntax crashes
             let sidebarHTML = `
                 <div class="sidebar-header" style="border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 12px; margin-bottom: 16px;">
                     <div
@@ -63,7 +62,6 @@ export async function loadVillages(map) {
                         <span>${villageName}</span>
                     </div>
                 </div>
-                <div class="popup-scroll-container">
             `;
 
             if (videoFile && videoFile.trim() !== "") {
@@ -75,7 +73,7 @@ export async function loadVillages(map) {
                 `;
             }
 
-           if (audioFile && audioFile.trim() !== "") {
+            if (audioFile && audioFile.trim() !== "") {
                 sidebarHTML += `
                     <audio id="${audioId}" preload="none">
                         <source src="audio/${audioFile.trim()}" type="audio/mpeg">
@@ -101,14 +99,13 @@ export async function loadVillages(map) {
                 sidebarHTML += `</div>`;
             }
 
-            sidebarHTML += `</div>`;
-
             layer.on("click", (e) => {
                 L.DomEvent.stopPropagation(e);
                 const content = document.getElementById("sidebar-content");
 
                 if (content) {
                     content.innerHTML = sidebarHTML;
+                    content.scrollTop = 0; // Resets scroll position to top when switching villages
                 }
             });
         }
