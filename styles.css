@@ -196,7 +196,7 @@ body,
     background-color: #D23929;
     
     /* 2. Load the WebP image on TOP, with an optional subtle gradient overlay UNDER it if desired */
-    background-image: url("./images/log_sign.webp"); 
+    background-image: url("./images/erasebg-transformed.webp"); 
     
     /* 3. Control sizing & positioning so it sits cleanly on the panel */
     background-size: contain;        /* Scales the transparent image down so it doesn't clip */
