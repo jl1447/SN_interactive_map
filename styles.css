@@ -186,7 +186,7 @@ body,
 #sidebar-panel::before {
     content: "";
     position: absolute;
-    top: 20%;            /* Offset from the top */
+    top: 5%;            /* Offset from the top */
     bottom: 5%;         /* Offset from the bottom */
     left: 0;
     right: 0;
