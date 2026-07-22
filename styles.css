@@ -225,7 +225,7 @@ body,
 /* Inner Scroll Area */
 #sidebar-content {
     position: absolute;
-    top: 0;                /* Starts at the top so header content isn't cut off */
+    top: 5%;                /* Match top of middle board */
     bottom: 5%;           /* Ends exactly where the middle board ends */
     left: 0;
     right: 0;
