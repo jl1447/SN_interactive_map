@@ -168,43 +168,44 @@ body,
     margin-bottom: 2px;
 }
 
+/* 1. Main Sidebar Wrapper (Fixed viewport height, no scrolling here) */
 #sidebar-panel {
     position: relative; 
     width: 42%; 
-    height: 100%;
+    height: 100vh; /* Fixed height locks pseudo-elements in place */
     background-color: #D23929;
     color: #FFFFFF;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
-    display: block;
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
-    padding: 20px 60px; 
+    overflow: hidden; /* Stops pseudo-elements from overflowing */
 }
 
-/* 1. Middle Board (Explicit dimensions using calc) */
+/* 2. Middle Board (Pinned accurately to 20% top & bottom) */
 #sidebar-panel::before {
     content: "";
     position: absolute;
     top: 20%;
+    bottom: 20%;
     left: 0;
-    width: 100%;
-    height: 60%; /* Occupies middle 60%, leaving 20% top & bottom gaps */
+    right: 0;
     background-image: url("./images/middle_board.webp");
     background-repeat: repeat-y;
     background-size: 100% auto;
     background-position: center top;
     pointer-events: none;
-    z-index: 0;
+    z-index: 1;
 }
 
-/* 2. Side Logs (Overlapping the board edges) */
+/* 3. Side Logs (Layered cleanly over board edges) */
 #sidebar-panel::after {
     content: "";
     position: absolute;
     top: 0;
+    bottom: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
     background-image: 
         url("./images/longer_log_design_one_L.webp"), 
         url("./images/longer_log_design_one_R.webp");
@@ -212,26 +213,35 @@ body,
     background-repeat: no-repeat, no-repeat;
     background-size: auto 100%, auto 100%;
     pointer-events: none;
-    z-index: 1;
-}
-
-/* 3. Ensures content sits above the logs and board */
-#sidebar-panel > * {
-    position: relative;
     z-index: 2;
 }
 
+/* 4. Scrolling Area (Content scrolls inside without breaking backgrounds) */
+.popup-scroll-container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px 60px; /* Moves text inward past the logs */
+    box-sizing: border-box;
+    margin-top: 0; /* Replaces old margin-top */
+}
+
+/* Close button layered on top of everything */
 #close-sidebar {
     position: absolute;
     top: 15px;
     right: 15px;
     background: none;
     border: none;
-    color: #FFFFFF; /* Ensures the close 'X' stays white */
+    color: #FFFFFF;
     font-size: 20px;
     cursor: pointer;
     opacity: 0.7;
     transition: opacity 0.2s;
+    z-index: 4;
 }
 
 #close-sidebar:hover {
