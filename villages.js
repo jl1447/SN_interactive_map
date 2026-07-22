@@ -16,10 +16,9 @@ window.clearSidebar = function() {
                     Sḵwx̱wú7mesh Úxwumixw Interactive Amalgamation Village Map
                 </h2>
                 <p style="
-                    color: rgba(255, 255, 255, 0.8); 
-                    font-style: italic; 
+                    color: #000000; 
+                    font-style: normal; 
                     margin: 0;
-                    /*text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
                 ">
                     Welcome to the very first peek at the Squamish Nation Interactive Map.<br>
                     <br>
