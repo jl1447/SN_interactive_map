@@ -155,7 +155,7 @@ body,
 
 .village-title {
     text-align: center;
-    color: #FFFFFF; /* CHANGED to white so it's readable on the red background */
+    color: #FFFFFF; 
     font-family: Tahoma, sans-serif;
     font-size: 16px;
     font-weight: bold;
@@ -164,47 +164,20 @@ body,
 
 #sidebar-panel {
     position: relative; 
-    width: 33%;          
-    height: 100%;
-    
-    /* Adds the translucent Squamish Red tint over your WebP asset */
-    background-image: linear-gradient(
-        rgba(210, 57, 41, 0.50), 
-        rgba(210, 57, 41, 0.50)
-      ), 
-      url("./images/erasebg-transformed.webp"); 
-    
-    /* Configures the background scaling rules */
-    background-size: contain;        /* Scales the webp asset to perfectly cover the area */
-    background-position: center;   /* Keeps the focus centered */
-    background-repeat: no-repeat;
-    
-    color: #FFFFFF;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.15);
-    display: block;
-    overflow-y: auto;
-    box-sizing: border-box;
-    padding: 20px;
-}
-
-#sidebar-panel {
-    position: relative; 
     width: 33%; 
     height: 100%;
     
-    /* 1. Base solid background color for the panel */
+    /* Solid base color */
     background-color: #D23929;
     
-    /* 2. Load the WebP image on TOP, with an optional subtle gradient overlay UNDER it if desired */
+    /* Background Image & Overlay Settings */
     background-image: url("./images/erasebg-transformed.webp"); 
-    
-    /* 3. Control sizing & positioning so it sits cleanly on the panel */
-    background-size: contain;        /* Scales the transparent image down so it doesn't clip */
-    background-position: center;     /* Centers the image within the panel */
-    background-repeat: no-repeat;    /* Prevents tiling */
+    background-size: contain;         /* Scales the image so it doesn't clip */
+    background-position: center;      /* Centers the image within the panel */
+    background-repeat: no-repeat;     /* Prevents tiling */
     
     color: #FFFFFF;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.15);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
     display: block;
     overflow-y: auto;
     box-sizing: border-box;
