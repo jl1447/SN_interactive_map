@@ -216,20 +216,26 @@ body,
     z-index: 2;
 }
 
-/* Inner Scroll Area (Targeting the actual HTML ID!) */
+/* Inner Scroll Area */
 #sidebar-content {
     position: relative;
     z-index: 3;
     pointer-events: auto;
-    width: 100%;
-    flex: 1;             /* Takes up all remaining vertical space */
-    min-height: 0;       /* Crucial for flex child scrolling! */
-    overflow-y: auto;    /* Enables vertical scrolling */
+    
+    /* 1. Constrain width & center inside the log frame */
+    width: calc(100% - 120px); /* Leaves 60px clearance on both left and right */
+    margin: 0 auto;            /* Centers the scroll area between the log borders */
+    
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
     overflow-x: hidden;
-    padding: 20px 60px;  /* Pads content inside the decorative log frame */
+    
+    /* 2. Inner content spacing */
+    padding: 20px 10px;        
     box-sizing: border-box;
     text-align: center;
-    scrollbar-gutter: stable;
+    scrollbar-gutter: stable;  /* Prevents content from jumping when scrollbar appears */
 }
 
 /* Close Button */
