@@ -168,7 +168,7 @@ body,
    5. Sidebar Panel & Framing Layout
    ========================================== */
 
-/* Main Sidebar Wrapper (Fixed height container) */
+/* Main Sidebar Wrapper (Fixed viewport height) */
 #sidebar-panel {
     position: relative; 
     width: 42%; 
@@ -179,7 +179,7 @@ body,
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    overflow: hidden; /* Stops pseudo-elements from overflowing */
+    overflow: hidden; /* Clips decorative overlays to sidebar bounds */
 }
 
 /* Middle Board Overlay */
@@ -216,15 +216,17 @@ body,
     z-index: 2;
 }
 
-/* Inner Scroll Area */
-.popup-scroll-container {
+/* Inner Scroll Area (Targeting the actual HTML ID!) */
+#sidebar-content {
     position: relative;
     z-index: 3;
+    pointer-events: auto;
     width: 100%;
-    height: 100%;
-    overflow-y: auto;
+    flex: 1;             /* Takes up all remaining vertical space */
+    min-height: 0;       /* Crucial for flex child scrolling! */
+    overflow-y: auto;    /* Enables vertical scrolling */
     overflow-x: hidden;
-    padding: 20px 60px; /* Pads content inside the decorative frame */
+    padding: 20px 60px;  /* Pads content inside the decorative log frame */
     box-sizing: border-box;
     text-align: center;
     scrollbar-gutter: stable;
