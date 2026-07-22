@@ -181,30 +181,30 @@ body,
     padding: 20px 60px; 
 }
 
-/* 1. Repeating Middle Board (Leaves 20% gap top and bottom) */
+/* 1. Middle Board (Explicit dimensions using calc) */
 #sidebar-panel::before {
     content: "";
     position: absolute;
     top: 20%;
-    bottom: 20%;
     left: 0;
-    right: 0;
+    width: 100%;
+    height: 60%; /* Occupies middle 60%, leaving 20% top & bottom gaps */
     background-image: url("./images/middle_board.webp");
     background-repeat: repeat-y;
     background-size: 100% auto;
     background-position: center top;
-    pointer-events: none; /* Allows clicks to pass through to content */
-    z-index: 1;
+    pointer-events: none;
+    z-index: 0;
 }
 
-/* 2. Side Log Graphics (Layered over the edges of the board) */
+/* 2. Side Logs (Overlapping the board edges) */
 #sidebar-panel::after {
     content: "";
     position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
-    right: 0;
+    width: 100%;
+    height: 100%;
     background-image: 
         url("./images/longer_log_design_one_L.webp"), 
         url("./images/longer_log_design_one_R.webp");
@@ -212,14 +212,15 @@ body,
     background-repeat: no-repeat, no-repeat;
     background-size: auto 100%, auto 100%;
     pointer-events: none;
+    z-index: 1;
+}
+
+/* 3. Ensures content sits above the logs and board */
+#sidebar-panel > * {
+    position: relative;
     z-index: 2;
 }
 
-/* 3. Ensures your text, buttons, and content sit above the background graphics */
-#sidebar-panel > * {
-    position: relative;
-    z-index: 3;
-}
 #close-sidebar {
     position: absolute;
     top: 15px;
