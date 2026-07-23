@@ -12,7 +12,7 @@ export function addLogo(map) {
         );
 
         div.innerHTML = `
-            <img src="qrcode.png" alt="QR Code" class="qr-code-img">
+            <img src="Interactive map survey.png" alt="QR Code" class="qr-code-img">
             <img src="Logo_Wordmark_Red_and_Black.png" alt="Squamish Nation Logo" class="logo-img">
         `;
 
