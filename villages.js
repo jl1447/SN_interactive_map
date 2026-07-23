@@ -24,7 +24,7 @@ window.clearSidebar = function() {
                     <br>
                     This is the beginning of an ongoing  journey to present our Land, Culture and History in an interactive digital display that our People can use and enjoy. <br>
                     <br>
-                    We really welcome ideas and suggestions, so please feel free to scan the QR Code in the bottom left corner and share your thoughts. 
+                    We really welcome ideas and suggestions, so please feel free to scan the QR Code in the bottom right corner and share your thoughts. 
                 </p>
             </div>
         `;
