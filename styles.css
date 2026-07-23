@@ -26,7 +26,7 @@ body,
 .logo-control .qr-code-img {
     width: 100px;
     height: auto;
-    opacity: 0.8; /* Reduced from 0.95 to make it slightly transparent */
+    opacity: 0.6; /* Reduced from 0.95 to make it slightly transparent */
     background: rgba(255, 255, 255, 0.85); /* Slightly transparent white background */
     padding: 6px;
     border-radius: 6px;
