@@ -14,12 +14,32 @@ body,
     background: white;
 }
 
-.logo-control img {
+/* Container for stacked controls in bottom right */
+.logo-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Spacing between QR Code and Logo */
+}
+
+/* QR Code styling */
+.logo-control .qr-code-img {
+    width: 100px;
+    height: auto;
+    opacity: 0.95;
+    background: #ffffff; /* Adds background padding for better scanner contrast if PNG is transparent */
+    padding: 6px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    pointer-events: auto; /* Allows users to tap/save the image if on mobile */
+}
+
+/* Logo styling */
+.logo-control .logo-img {
     width: 180px;
     opacity: 0.8;
     pointer-events: none;
 }
-
 /* ==========================================
    2. Typography & Interactive Elements
    ========================================== */
