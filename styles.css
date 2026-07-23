@@ -28,8 +28,8 @@ body,
     height: auto;
     opacity: 0.6; /* Reduced from 0.95 to make it slightly transparent */
     background: rgba(255, 255, 255, 0.85); /* Slightly transparent white background */
-    padding: 6px;
-    border-radius: 6px;
+    padding: 0px;
+    border-radius: 0px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     pointer-events: auto;
     transition: opacity 0.2s ease; /* Adds a nice smooth hover transition */
