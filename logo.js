@@ -11,8 +11,10 @@ export function addLogo(map) {
             "logo-control"
         );
 
-        div.innerHTML =
-            '<img src="Logo_Wordmark_Red_and_Black.png" alt="Squamish Nation Logo">';
+        div.innerHTML = `
+            <img src="qrcode.png" alt="QR Code" class="qr-code-img">
+            <img src="Logo_Wordmark_Red_and_Black.png" alt="Squamish Nation Logo" class="logo-img">
+        `;
 
         return div;
     };
